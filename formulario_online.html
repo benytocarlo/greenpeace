@@ -41,7 +41,7 @@
         <div class="small-10 small-centered columns">
           <p class="fs48">¡ÚNETE AHORA!</p>
           <p>Únete hoy a Greenpeace para proteger y defender activamente el medio ambiente de los atentados y crímenes que se cometen en todo el mundo contra la Naturaleza. Súmate como socio y sé parte de los más de 2,8 millones de personas que en todo el mundo comparten contigo su pasión por la protección de nuestro planeta. Greenpeace es una organización independiente política y económicamente. Por esto Greenpeace no acepta dinero de empresas, gobiernos o partidos políticos. Sólo cuenta con el apoyo de personas como tú. ¡Súmate!</p>
-          <form action="">
+          <form id="formulario" name="formulario" action="https://unete.greenpeace.cl/FormMa/procesar_cupon.php" method="POST">
             <div class="row">
               <div class="medium-8 columns">
                 <h2>Autorizo el débito automático mensual de:</h2>
@@ -52,16 +52,16 @@
             <div class="row">
               <div class="small-4 small-centered columns fila monto">
                 <ul class="left">
-                  <li><input type="radio"><label for="">$ 6.000 ($200 diarios)</label></li>
-                  <li><input type="radio"><label for="">$ 10.000 ($333 diarios)</label></li>
-                  <li><input type="radio"><label for="">$ 15.000 ($500 diarios)</label></li>
+                  <li><input name="importe" type="radio"><label for="">$ 6.000 ($200 diarios)</label></li>
+                  <li><input name="importe" type="radio"><label for="">$ 10.000 ($333 diarios)</label></li>
+                  <li><input name="importe" type="radio"><label for="">$ 15.000 ($500 diarios)</label></li>
                 </ul>
                 <ul class="right">
-                  <li><input type="radio"><label for="">$ 7.000 ($250 diarios)</label></li>
-                  <li><input type="radio"><label for="">$ 12.000 ($417 diarios)</label></li>
-                  <li><input type="radio"><label for="">Otras donaciones</label></li>
+                  <li><input name="importe" type="radio"><label for="">$ 7.000 ($250 diarios)</label></li>
+                  <li><input name="importe" type="radio"><label for="">$ 12.000 ($417 diarios)</label></li>
+                  <li><input name="importe" type="radio"><label for="">Otras donaciones</label></li>
                 </ul>
-                <input type="text" placeholder="Monto" class="input_big input_text" />
+                <input type="text" id="monto" name="Monto" placeholder="Monto" class="input_big input_text" />
               </div>
             </div>
             <div class="row">
@@ -111,62 +111,62 @@
               </div>
               <div class="medium-4 columns">
                 <div class="fila">
-                  <input type="text" placeholder="Nombre" class="input_text input_big" />
+                  <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" />
                 </div>
                 <div class="fila">
-                  <input type="text" placeholder="Apellido" class="input_big input_text" />
+                  <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" />
                 </div>
                 <div class="fila">
-                  <select name="" id="" class="select">
+                  <select name="sexo" id="" class="select">
                     <option value="">Sexo</option>
                   </select>
                 </div>
                 <div class="fila nacimiento">
-                  <select name="" id="" class="select">
+                  <select name="dia" id="" class="select">
                     <option value="">Día</option>
                   </select>
-                  <select name="" id="" class="select">
+                  <select name="mes" id="" class="select">
                     <option value="">Mes</option>
                   </select>
-                  <input type="text" placeholder="Año" class="input_text" />
+                  <input type="text" name="anio" placeholder="Año" class="input_text" />
                 </div>
                 <div class="fila">
-                  <select name="" id="" class="select">
+                  <select name="pais" id="" class="select">
                     <option value="">Selecciona</option>
                   </select>
                 </div>
                 <div class="fila">
-                  <select name="" id="" class="select">
+                  <select name="region" id="" class="select">
                     <option value="">Selecciona</option>
                   </select>
                 </div>
                 <div class="fila">
-                  <select name="" id="" class="select">
+                  <select name="comuna" id="" class="select">
                     <option value="">Selecciona</option>
                   </select>
                 </div>
                 <div class="fila">
-                  <input type="text" placeholder="Avenida o calle, número, piso, departamento" class="input_big input_text" />
+                  <input type="text" name="direccion" placeholder="Avenida o calle, número, piso, departamento" class="input_big input_text" />
                 </div>
                 <div class="fila">
-                  <select name="" id="" class="select">
+                  <select name="ocupacion" id="" class="select">
                     <option value="">Selecciona</option>
                   </select>
                 </div>
                 <div class="fila">
-                  <input type="text" placeholder="Nombre@dominio.com" class="input_big input_text" />
+                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" />
+                </div>
+                <div class="fila">
+                  <select name="telefono_area" id="" class="select codigo">
+                    <option value="">Código</option>
+                  </select>
+                  <input type="text" name="telefono_numero" class="input_fono input_text" />
                 </div>
                 <div class="fila">
                   <select name="" id="" class="select codigo">
                     <option value="">Código</option>
                   </select>
-                  <input type="text" class="input_fono input_text" />
-                </div>
-                <div class="fila">
-                  <select name="" id="" class="select codigo">
-                    <option value="">Código</option>
-                  </select>
-                  <input type="text" class="input_fono input_text" />
+                  <input type="text" name="celular" class="input_fono input_text" />
                 </div>
               </div>
               <div class="medium-4 columns end"></div>
@@ -197,26 +197,26 @@
               </div>
               <div class="medium-4 columns">
                 <div class="fila">
-                  <select name="" id="" class="select">
+                  <select name="tarjeta_tipo" id="" class="select">
                     <option value="">Seleccione tarjeta</option>
                   </select>
                 </div>
                 <div class="fila">
-                  <input type="text" placeholder="Sólo números, sin guiones" class="input_text input_big" />
+                  <input type="text" name="tarjeta_numero" placeholder="Sólo números, sin guiones" class="input_text input_big" />
                 </div>
                 <div class="fila vencimiento">
-                  <select name="" id="" class="select selectmr">
+                  <select name="tarjeta_mes" id="" class="select selectmr">
                     <option value="">Día</option>
                   </select>
-                  <select name="" id="" class="select">
+                  <select name="tarjeta_anio" id="" class="select">
                     <option value="">Mes</option>
                   </select>
                 </div>
                 <div class="fila">
-                  <input type="text" placeholder="Sin puntos ni guión" class="input_text input_big" />
+                  <input type="text" name="tarjeta_run" placeholder="Sin puntos ni guión" class="input_text input_big" />
                 </div>
                 <div class="fila">
-                  <input type="text" placeholder="Como aparece en la tarjeta" class="input_text input_big" />
+                  <input type="text" name="nom_ape_tarjeta" placeholder="Como aparece en la tarjeta" class="input_text input_big" />
                 </div>
                 <div class="fila cont_btnu">
                   <a class="btn_unete" href="">Enviar</a>
@@ -224,6 +224,9 @@
               </div>
               <div class="medium-4 columns end"></div>
             </div>
+            <input type="hidden" name="form_id" value="">
+            <input type="hidden" name="referer" value="">
+            <input type="hidden" id="url_return" name="url_return" value="">
           </form>
         </div>
       </div>
