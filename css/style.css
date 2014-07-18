@@ -658,7 +658,7 @@ a{
 .nacimiento select{
 	float: left;
 	text-align: center;
-	width: 32%;
+	width: 32.8%;
 }
 
 .unete .cont_form h2{
@@ -667,11 +667,11 @@ a{
 
 .vencimiento select{
 	float: left;
-	width: 49%;
+	width: 49.6%;
 }
 
 .selectmr{
-	margin-right: 8px;
+	margin-right: 0.8%;
 }
 
 .cont_btnu{
@@ -684,6 +684,13 @@ a{
 }
 
 /*Queries*/
+
+@media (max-width: 1300px) {
+	.monto .right,
+	.monto .left{
+		float: none !important;
+	}
+}
 
 @media (max-width: 1120px) {
 	.cont_left .fs34{
@@ -750,6 +757,16 @@ a{
 	.cont_right{
 		padding-bottom: 0;
 	}
+	.monto {
+    	margin-left: 34%;
+	}
+}
+
+@media (max-width: 1025px) {
+	.nacimiento input, 
+	.nacimiento select{
+		width: 32.8%;
+	}
 }
 
 @media (max-width: 740px) {
@@ -776,6 +793,19 @@ a{
 		display: none;
 	}
 	.home .acordeon{
+		display: block;
+	}
+	.nacimiento input, 
+	.nacimiento select{
+		width: 32.8%;
+	}
+	.monto {
+    	margin-left: 0;
+	}
+	.label_left{
+		display: none;
+	}
+	.label_mobile{
 		display: block;
 	}
 }
