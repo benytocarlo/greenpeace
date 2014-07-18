@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenpeace | 20 años</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body class="bg_verde">
+    <div class="home">
+      <div class="row">
+        <div class="large-4 medium-12 columns verde" id="izq">
+          <div class="row cont_left">
+            <div class="large-12 columns centrado">
+              <img src="images/main_logo.jpg" alt="" />
+              <h4>DESCUBRE QUIENES ESTÁN DESTRUYENDO EL PLANETA</h4>
+              <p class="subtitle">NO TE IMAGINAS QUIENES SON LOS PRINCIPALES ENEMIGOS DE NUESTRO MEDIO AMBIENTE</p>
+              <ul class="social">
+                <li><a href="javascript:;"><img src="images/icon_youtube.png" alt=""></a></li>
+                <li><a href="javascript:;"><img src="images/icon_facebook.png" alt=""></a></li>
+                <li><a href="javascript:;"><img src="images/icon_twitter.png" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+          <img src="images/anios.png" alt="" class="anios">
+          <div class="footer1">
+            <p>GREENPEACE WORLDWIDE</p>
+          </div> 
+        </div>
+        <div class="large-8 medium-12 columns" id="der">
+          <div class="row">
+            <div class="large-6 medium-6 columns">
+              <a href="interior.html" class="cont_img">
+                <img src="images/bosque.jpg" alt="" class="img100" />
+                <img src="images/mas.png" alt="" class="mas">
+                <div class="descripcion bosques opacidad">
+                  <div class="bottom">
+                    <h3>BOSQUES</h3>
+                    <p>CADA DÍA SE TALA MÁS DE 500.000 ÁRBOLES EN EL AMAZONAS Y ESTA COMPAÑIA ES LA CULPABLE</p>
+                  </div>  
+                </div>
+              </a>
+              <a href="javascript:;" class="cont_img">
+                <img src="images/oceanos.jpg" alt="" class="img100" />
+                <img src="images/mas.png" alt="" class="mas">
+                <div class="descripcion oceanos opacidad">
+                  <div class="bottom">
+                    <h3>OCÉANO</h3>
+                    <p>LA CANTIDAD DE DESECHOS ARROJADOS AL MAR ESTE AÑO POR ESTA CORPORACIÓN ES SORPRENDENTE</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="large-6 medium-6 columns">
+              <a href="javascript:;" class="cont_img">
+                <img src="images/artico.jpg" alt="" class="img100" />
+                <img src="images/mas.png" alt="" class="mas">
+                <div class="descripcion artico opacidad">
+                  <div class="bottom">
+                    <h3>ÁRTICO</h3>
+                    <p>ESTA EMPRESA ES LA PRIMERA CAUSA DE LA DESTRUCCIÓN DEL GLACIAR DE SVELEKINGG</p>
+                  </div>                
+                </div>
+              </a>
+              <a href="javascript:;" class="cont_img">
+                <img src="images/nuclear.jpg" alt="" class="img100" />
+                <img src="images/mas.png" alt="" class="mas">
+                <div class="descripcion nuclear opacidad">
+                  <div class="bottom">
+                    <h3>ENERGÍA NUCLEAR</h3>
+                    <p>ESTA COMPAÑIA NO ESTÁ CUMPLIENDO SU PARTE EL TRATO</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row acordeon">
+        <div class="small-12 columns">
+          <div class="accordionButton closed link1"><h4>BOSQUES</h4></div>
+          <div class="accordionContent bosques">
+            <p>CADA DÍA SE TALA MÁS DE 500.000 ÁRBOLES EN EL AMAZONAS Y ESTA COMPAÑIA ES LA CULPABLE</p>
+            <a href="interior.html" class="ver_mas">ver más</a>
+          </div>
+          <div class="accordionButton closed link2"><h4>ÁRTICO</h4></div>
+          <div class="accordionContent artico">
+            <p>ESTA EMPRESA ES LA PRIMERA CAUSA DE LA DESTRUCCIÓN DEL GLACIAR DE SVELEKINGG</p>
+            <a href="javascript:;" class="ver_mas">ver más</a>
+          </div>
+          <div class="accordionButton closed link3"><h4>OCÉANOS</h4></div>
+          <div class="accordionContent oceanos">
+            <p>LA CANTIDAD DE DESECHOS ARROJADOS AL MAR ESTE AÑO POR ESTA CORPORACIÓN ES SORPRENDENTE</p>
+            <a href="javascript:;" class="ver_mas">ver más</a>
+          </div>
+          <div class="accordionButton closed link4"><h4>ENERGÍA NUCLEAR</h4></div>
+          <div class="accordionContent nuclear">
+            <p>ESTA COMPAÑIA NO ESTÁ CUMPLIENDO SU PARTE EL TRATO</p>
+            <a href="javascript:;" class="ver_mas">ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="row footer2">
+        <div class="small-12 columns">
+          <ul class="social2">
+            <li><a href="javascript:;"><img src="images/icon_youtube.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/icon_facebook.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/icon_twitter.png" alt=""></a></li>
+          </ul>
+          <p>GREENPEACE WORLDWIDE</p>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      $( document ).ready(function() {
+          $("div#izq").height($("div#der").height()) 
+          $( window ).resize(function() {
+              $("div#izq").height($("div#der").height()) 
+          }); // end resize 
+
+      });
+
+      $('div.accordionButton').click(function() {
+        if ($(this).hasClass('closed')) {
+          $('div.accordionButton').addClass('closed');
+          $(this).removeClass('closed');
+          $('div.accordionContent').slideUp('normal');
+          $(this).next().slideDown('normal');
+        } else {
+          $(this).addClass('closed');
+          $(this).next().slideUp('normal');
+        }
+      });
+
+      /*$( document ).ready(function() {
+        $(window).on('resize', function () {
+          if ($("div#izq").height() > $("div#der").height()) {
+            $("div#der").height($("div#izq").height())
+          }else{
+            $("div#izq").height($("div#der").height())
+          }
+        }).trigger('resize');
+      });*/
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenpeace | 20 años</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body class="bosques">
+    <div class="bosques">
+      <div class="sombra"></div>
+      <div class="row">
+        <div class="large-12">
+          <div class="large-12 columns header_tablet">
+            <a href="index.html"><img src="images/main_logo.jpg" alt="" class="main_logo" /></a>
+            <img src="images/anios.png" alt="" class="anios" />
+            <a href="" class="menu"></a>
+            <div class="acordeon">
+              <h3><a href="" class="bosques">BOSQUES<img src="images/activo.png" alt="" /></a></h3>
+              <h3><a href="" class="artico">ÁRTICO</a></h3>
+              <h3><a href="" class="oceanos">OCÉANOS</a></h3>
+              <h3><a href="" class="nuclear">ENERGÍA NUCLEAR</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12">
+          <ul class="main_nav">
+            <li class="cont_logo"><a href="index.html" class="bg_verde"><img src="images/main_logo.jpg" alt=""></a></li>
+            <li><a href="" class="bosques">BOSQUES</a></li>
+            <li><a href="" class="artico">ÁRTICO</a></li>
+            <li><a href="" class="oceanos">OCÉANOS</a></li>
+            <li><a href="" class="nuclear">ENERGÍA NUCLEAR</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row cont_interior">
+        <div class="large-10 large-centered columns">
+          <h1 class="borde">DEFORESTACIÓN</h1>
+          <h3 class="marginb">BRASIL ES EL SEXTO MAYOR EMISOR DE GASES QUE PROVOCAN EL CALENTAMIENTO GLOBAL DEL PLANETA DEBIDO A SU DEFORESTACIÓN</h3>
+          <div class="row">
+            <div class="large-4 columns cont_left">
+              <p class="fs34">DESPLAZAMIENTO DEL AMAZONAS</p>
+              <p class="fs24">(en Km/año)</p>
+              <p class="fs24">La reforma de la ley de bosques puede dejar sin protección un área de la amazonía equivalente al tamaño de francia</p>
+            </div>
+            <div class="large-8 columns cont_right">
+              <img src="images/grafico1.png" alt="" class="grafico1" />
+              <img src="images/grafico2.png" alt="" class="grafico2" />
+              <h2 class="header_login3"><a href="contacto.html">¡ÚNETE AHORA!</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row footer2">
+        <div class="small-12 columns">
+          <ul class="social2">
+            <li><a href="javascript:;"><img src="images/icon_youtube.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/icon_facebook.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/icon_twitter.png" alt=""></a></li>
+          </ul>
+          <p>GREENPEACE WORLDWIDE</p>
+        </div>
+      </div>
+      <div class="header_login2">
+        <h2>¡ÚNETE AHORA!</h2>
+      </div>
+      <div class="login">
+        <div class="header_login">
+          <h2>¡ÚNETE AHORA!</h2>
+        </div>
+        <div class="cont_login">
+          <p>Completa nuestro formulario y súmate a nuestra causa</p>
+          <form action="">
+            <div class="fila">
+              <input type="text" placeholder="Nombre" class="input_big input_text" />
+            </div>
+            <div class="fila">
+              <input type="text" placeholder="Email" class="input_big input_text" />
+            </div>
+            <div class="fila">
+                  <input type="text" placeholder="02" class="codigo input_text" maxlength="2" />
+                  <input type="text" placeholder="Teléfono" class="input_fono input_text" />
+                </div>
+            <div class="fila">
+              <input type="checkbox" name="" value="" class="left" />
+              <label for="" class="label_check">Sí, deseo recibir más información sobre las campañas de Greenpeace y de cómo colaborar.</label>
+            </div>
+            <div class="fila">
+              <a href="" class="enviar">Únete a nosotros</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      $( document ).ready(function() {
+          $("div#izq").height($("div#der").height()) 
+
+          $( window ).resize(function() {
+              $("div#izq").height($("div#der").height()) 
+          }); // end resize 
+
+          $('.header_login2').click(function() {
+            $('.login, .sombra').slideToggle();
+          });
+
+          $('.header_login, .sombra').click(function() {
+            $('.login, .sombra').slideToggle();
+          });
+
+          $('.menu').click(function(e) {
+            e.preventDefault();
+            $('.acordeon').slideToggle();
+          });
+
+      });
+
+      $('div.accordionButton').click(function() {
+        if ($(this).hasClass('closed')) {
+          $('div.accordionButton').addClass('closed');
+          $(this).removeClass('closed');
+          $('div.accordionContent').slideUp('normal');
+          $(this).next().slideDown('normal');
+        } else {
+          $(this).addClass('closed');
+          $(this).next().slideUp('normal');
+        }
+      });
+
+    </script>
+  </body>
+</html>
