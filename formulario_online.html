@@ -41,8 +41,7 @@
         <div class="small-10 small-centered columns">
           <p class="fs48">¡ÚNETE AHORA!</p>
           <p>Únete hoy a Greenpeace para proteger y defender activamente el medio ambiente de los atentados y crímenes que se cometen en todo el mundo contra la Naturaleza. Súmate como socio y sé parte de los más de 2,8 millones de personas que en todo el mundo comparten contigo su pasión por la protección de nuestro planeta. Greenpeace es una organización independiente política y económicamente. Por esto Greenpeace no acepta dinero de empresas, gobiernos o partidos políticos. Sólo cuenta con el apoyo de personas como tú. ¡Súmate!</p>
-          <!--form id="formulario" name="formulario" action="https://unete.greenpeace.cl/FormMa/procesar_cupon.php" method="POST"-->
-          <form id="formulario" name="formulario" action="" method="POST">
+          <form id="formulario" name="formulario" action="https://unete.greenpeace.cl/FormMa/procesar_cupon.php" method="POST">
             <div class="row">
               <div class="medium-8 columns">
                 <h2>Autorizo el débito automático mensual de:</h2>
@@ -120,8 +119,8 @@
                   <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" />
                 </div>
                 <div class="fila">
-                  <label for="" name="sexo" class="label_mobile">Sexo</label>
-                  <select name="" id="" class="select">
+                  <label for="" class="label_mobile">Sexo</label>
+                  <select name="sexo" id="" class="select">
                     <option value="">Sexo</option>
                   </select>
                 </div>
@@ -166,8 +165,8 @@
                   </select>
                 </div>
                 <div class="fila">
-                  <label for="" name="email" class="label_mobile">Email</label>
-                  <input type="text" placeholder="Nombre@dominio.com" class="input_big input_text" />
+                  <label for="" class="label_mobile">Email</label>
+                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" />
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono fijo</label>
@@ -175,11 +174,11 @@
                   <input type="text" name="telefono_numero" placeholder="Escribe solo los 8 dígitos" class="input_fono input_text" />
                 </div>
                 <div class="fila">
-                  <label for="" name="celular" class="label_mobile">Teléfono móvil: 9</label>
-                  <input type="text" placeholder="Escribe sólo números" class="input_big input_text" />
+                  <label for="" class="label_mobile">Teléfono móvil: 9</label>
+                  <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" />
                 </div>
                 <div class="fila">
-                  <input type="checkbox" name="" value="" class="left" />
+                  <input type="checkbox" id="checkbox_input" name="__ya_colabore" value="" class="left" />
                   <label for="" class="label_check">Ya he colaborado económicamente en alguna oportunidad con Greenpeace.</label>
                 </div>
               </div>
@@ -222,23 +221,23 @@
                 </div>
                 <div class="fila vencimiento">
                   <label for="" class="label_mobile">Fecha de vencimiento</label>
-                  <select name="" id="" class="select selectmr">
-                    <option value="" name="tarjeta_mes">Día</option>
+                  <select name="tarjeta_mes" id="" class="select selectmr">
+                    <option value="" >Día</option>
                   </select>
-                  <select name="" id="" class="select">
-                    <option value="" name="tarjeta_anio">Mes</option>
+                  <select name="tarjeta_anio" id="" class="select">
+                    <option value="" >Mes</option>
                   </select>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Rut</label>
-                  <input type="text" name="tarjeta_run" placeholder="Sin puntos ni guión" class="input_text input_big" />
+                  <input type="text" id="textfield_input" name="tarjeta_run" placeholder="Sin puntos ni guión" class="input_text input_big" onblur="return Valida_Rut(this)" onkeypress="return letrasRut(event)" maxlength="9"/>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Nombre y Apellido</label>
                   <input type="text" name="nom_ape_tarjeta" placeholder="Como aparece en la tarjeta" class="input_text input_big" />
                 </div>
                 <div class="fila cont_btnu">
-                  <a class="btn_unete" href="">Enviar</a>
+                  <a class="btn_unete" href="#">Enviar</a>
                 </div>
                 <input type="hidden" name="form_id" value="">
                 <input type="hidden" name="referer" value="">
@@ -264,25 +263,46 @@
       </div>
     </div>
     <!--script src="js/vendor/jquery.js"></script-->
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/foundation.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <style type="text/css">
+    #formulario .error{ background: red;}
+    #formulario strong{ display: none!important;}
+    </style>
     <script>
       $(document).foundation();
       $( document ).ready(function() {
 
-        $(".btn_unete").click(function(){
+        $(".btn_unete").click(function(e){
+          e.preventDefault();
           $("#formulario").submit();
         });
 
         $("#formulario").validate({
           rules: {
-            nombre   : { required: true, minlength: 5 },
-            apellido : { required: true, minlength: 5 },
-            email    : { required: true, email: true }
-          },
-          submitHandler: function() {
-            alert("dsadsadsa");
+            nombre          : { required: true, minlength: 5 },
+            apellido        : { required: true, minlength: 5 },
+            sexo            : { required: true },
+            dia             : { required: true },
+            mes             : { required: true },
+            anio            : { required: true },
+            pais            : { required: true },
+            region          : { required: true },
+            comuna          : { required: true },
+            direccion       : { required: true },
+            ocupacion       : { required: true },
+            email           : { required: true, email: true },
+            telefono_area   : { required: true },
+            telefono_numero : { required: true },
+            celular         : { required: true },
+            tarjeta_tipo    : { required: true },
+            tarjeta_numero  : { required: true },
+            tarjeta_mes     : { required: true },
+            tarjeta_anio    : { required: true },
+            tarjeta_run     : { required: true },
+            nom_ape_tarjeta : { required: true }
           }
         });
 
