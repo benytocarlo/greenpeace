@@ -683,6 +683,31 @@ a{
 	margin-bottom: 5px;
 }
 
+#formulario strong{
+	clear: both;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 5px 0;
+}
+
+#formulario .error_color{
+	background: #E5B3C7;
+	border: 1px solid #C1272D;
+}
+
+.error1 strong,
+.error2 strong{
+	display: none;
+}
+
+.error1{
+	padding-left: 5px;
+}
+
+.error1 .fila{
+	height: 40px;
+}
+
 /*Queries*/
 
 @media (max-width: 1300px) {
@@ -695,6 +720,12 @@ a{
 @media (max-width: 1120px) {
 	.cont_left .fs34{
 		font-size: 32px;
+	}
+}
+
+@media (min-width: 1024px) {
+	#formulario strong{
+		line-height: 40px;
 	}
 }
 
