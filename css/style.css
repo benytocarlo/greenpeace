@@ -443,8 +443,6 @@ a{
 }
 
 .codigo{
-	background: #E6E6E6;
-	color: #999;
 	display: block;
 	float: left;
 	font-size: 14px;
@@ -452,7 +450,7 @@ a{
 	line-height: 22px;
 	padding: 10px;
 	text-align: center;
-	width: 20%;
+	width: 22%;
 }
 
 .input_big{
@@ -460,7 +458,7 @@ a{
 }
 
 .input_fono{
-	width: 80%;
+	width: 78%;
 }
 
 .fila{
@@ -663,10 +661,6 @@ a{
 	width: 32%;
 }
 
-.nacimiento select{
-	margin-right: 8px;
-}
-
 .unete .cont_form h2{
 	width: 100%;
 }
@@ -676,12 +670,17 @@ a{
 	width: 49%;
 }
 
-.vencimiento .selectmr{
+.selectmr{
 	margin-right: 8px;
 }
 
 .cont_btnu{
 	margin-top: 60px;
+}
+
+.label_mobile{
+	display: none;
+	margin-bottom: 5px;
 }
 
 /*Queries*/

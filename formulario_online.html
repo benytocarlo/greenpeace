@@ -72,7 +72,7 @@
               <div class="medium-4 columns end"></div>
             </div>
             <div class="row">
-              <div class="medium-4 columns label_left">
+              <div class="large-4 columns label_left cont_label">
                 <div class="fila">
                   <label for="" class="right">Nombre</label>
                 </div>
@@ -95,7 +95,7 @@
                   <label for="" class="right">Comuna</label>
                 </div>
                 <div class="fila">
-                  <label for="" class="right">Calle</label>
+                  <label for="" class="right">Dirección</label>
                 </div>
                 <div class="fila">
                   <label for="" class="right">Profesión</label>
@@ -107,70 +107,83 @@
                   <label for="" class="right">Teléfono fijo</label>
                 </div>
                 <div class="fila">
-                  <label for="" class="right">Teléfono móvil</label>
+                  <label for="" class="right">Teléfono móvil: 9</label>
                 </div>
               </div>
-              <div class="medium-4 columns">
+              <div class="large-4 columns">
                 <div class="fila">
+                  <label for="" class="label_mobile">Nombre</label>
                   <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" />
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Apellido</label>
                   <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" />
                 </div>
                 <div class="fila">
-                  <select name="sexo" id="" class="select">
+                  <label for="" name="sexo" class="label_mobile">Sexo</label>
+                  <select name="" id="" class="select">
                     <option value="">Sexo</option>
                   </select>
                 </div>
                 <div class="fila nacimiento">
-                  <select name="dia" id="" class="select">
+                  <label for="" class="label_mobile">Fecha de Nacimiento</label>
+                  <select name="dia" id="" class="select selectmr">
                     <option value="">Día</option>
                   </select>
-                  <select name="mes" id="" class="select">
+                  <select name="mes" id="" class="select selectmr">
                     <option value="">Mes</option>
                   </select>
-                  <input type="text" name="anio" placeholder="Año" class="input_text" />
+                  <select name="anio" id="" class="select">
+                    <option value="">Año</option>
+                  </select>
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">País</label>
                   <select name="pais" id="" class="select">
                     <option value="">Selecciona</option>
                   </select>
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Región</label>
                   <select name="region" id="" class="select">
                     <option value="">Selecciona</option>
                   </select>
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Comuna</label>
                   <select name="comuna" id="" class="select">
                     <option value="">Selecciona</option>
                   </select>
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Dirección</label>
                   <input type="text" name="direccion" placeholder="Avenida o calle, número, piso, departamento" class="input_big input_text" />
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Profesión</label>
                   <select name="ocupacion" id="" class="select">
                     <option value="">Selecciona</option>
                   </select>
                 </div>
                 <div class="fila">
-                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" />
+                  <label for="" name="email" class="label_mobile">Email</label>
+                  <input type="text" placeholder="Nombre@dominio.com" class="input_big input_text" />
                 </div>
                 <div class="fila">
-                  <select name="telefono_area" id="" class="select codigo">
-                    <option value="">Código</option>
-                  </select>
-                  <input type="text" name="telefono_numero" class="input_fono input_text" />
+                  <label for="" class="label_mobile">Teléfono fijo</label>
+                  <input type="text" name="telefono_area" placeholder="Cod. Local" class="codigo input_text" />
+                  <input type="text" name="telefono_numero" placeholder="Escribe solo los 8 dígitos" class="input_fono input_text" />
                 </div>
                 <div class="fila">
-                  <select name="" id="" class="select codigo">
-                    <option value="">Código</option>
-                  </select>
-                  <input type="text" name="celular" class="input_fono input_text" />
+                  <label for="" name="celular" class="label_mobile">Teléfono móvil: 9</label>
+                  <input type="text" placeholder="Escribe sólo números" class="input_big input_text" />
+                </div>
+                <div class="fila">
+                  <input type="checkbox" name="" value="" class="left" />
+                  <label for="" class="label_check">Ya he colaborado económicamente en alguna oportunidad con Greenpeace.</label>
                 </div>
               </div>
-              <div class="medium-4 columns end"></div>
+              <div class="large-4 columns end"></div>
             </div>
             <div class="row">
               <div class="medium-8 columns">
@@ -198,36 +211,41 @@
               </div>
               <div class="medium-4 columns">
                 <div class="fila">
+                  <label for="" class="label_mobile">Tarjeta de crédito</label>
                   <select name="tarjeta_tipo" id="" class="select">
                     <option value="">Seleccione tarjeta</option>
                   </select>
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Número de tarjeta</label>
                   <input type="text" name="tarjeta_numero" placeholder="Sólo números, sin guiones" class="input_text input_big" />
                 </div>
                 <div class="fila vencimiento">
-                  <select name="tarjeta_mes" id="" class="select selectmr">
-                    <option value="">Día</option>
+                  <label for="" class="label_mobile">Fecha de vencimiento</label>
+                  <select name="" id="" class="select selectmr">
+                    <option value="" name="tarjeta_mes">Día</option>
                   </select>
-                  <select name="tarjeta_anio" id="" class="select">
-                    <option value="">Mes</option>
+                  <select name="" id="" class="select">
+                    <option value="" name="tarjeta_anio">Mes</option>
                   </select>
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Rut</label>
                   <input type="text" name="tarjeta_run" placeholder="Sin puntos ni guión" class="input_text input_big" />
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Nombre y Apellido</label>
                   <input type="text" name="nom_ape_tarjeta" placeholder="Como aparece en la tarjeta" class="input_text input_big" />
                 </div>
                 <div class="fila cont_btnu">
                   <a class="btn_unete" href="">Enviar</a>
                 </div>
+                <input type="hidden" name="form_id" value="">
+                <input type="hidden" name="referer" value="">
+                <input type="hidden" id="url_return" name="url_return" value="">
               </div>
               <div class="medium-4 columns end"></div>
             </div>
-            <input type="hidden" name="form_id" value="">
-            <input type="hidden" name="referer" value="">
-            <input type="hidden" id="url_return" name="url_return" value="">
           </form>
         </div>
       </div>
