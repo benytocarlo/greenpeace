@@ -80,17 +80,17 @@
               <div class="large-4 medium-6 small-12 columns">
                 <div class="fila">
                   <label for="" class="label_mobile">Nombre</label>
-                  <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" />
+                  <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" maxlength="45" />
                   <p id ="error_nombre_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Apellido</label>
-                  <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" />
+                  <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" maxlength="45" />
                   <p id ="error_apellido_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Email</label>
-                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" />
+                  <input type="text" name="email" placeholder="nombre@dominio.com" class="input_big input_text" maxlength="150" />
                   <p id ="error_email_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
@@ -107,8 +107,7 @@
                     <option value="VALPARAÍSO">VALPARAÍSO</option>
                     <option value="METROPOLITANA">METROPOLITANA</option>
                     <option value="O
-                    'HIGGINS">O
-                    'HIGGINS</option>
+                    'HIGGINS">O'HIGGINS</option>
                     <option value="MAULE">MAULE</option>
                     <option value="BIOBÍO">BIOBÍO</option>
                     <option value="ARAUCANÍA">ARAUCANÍA</option>
@@ -121,23 +120,23 @@
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Ciudad</label>
-                  <input type="text" name="ciudad" placeholder="Ciudad" class="input_text input_big" />
+                  <input type="text" name="ciudad" placeholder="Ciudad" class="input_text input_big" maxlength="60" />
                   <p id ="error_ciudad_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>  
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono fijo</label>
-                  <input type="text" name="telefono_area" placeholder="Cod" class="codigo input_text" />
-                  <input type="text" name="telefono_numero" placeholder="Escribe solo los 8 dígitos" class="input_fono input_text" />
+                  <input type="text" name="telefono_area" placeholder="Cod" class="codigo input_text" maxlength="2" />
+                  <input type="text" name="telefono_numero" placeholder="Escribe solo los 8 dígitos" class="input_fono input_text" maxlength="8" />
                   <p id ="error_telefono_numero_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono móvil: 9</label>
-                  <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" />
+                  <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" maxlength="10" />
                   <p id ="error_celular_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Horario</label>
-                  <input type="text" name="horario" placeholder="Horario en que me encuentran" class="input_big input_text" />
+                  <input type="text" name="horario" placeholder="Horario en que me encuentran" class="input_big input_text" maxlength="25" />
                   <p id ="error_horario_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
               </div>
@@ -271,27 +270,13 @@
 
         $("#formulario").validate({
           rules: {
-            nombre          : { required: true, minlength: 5 },
-            apellido        : { required: true, minlength: 5 },
-            sexo            : { required: true },
-            dia             : { required: true },
-            mes             : { required: true },
-            anio            : { required: true },
-            pais            : { required: true },
-            region          : { required: true },
-            comuna          : { required: true },
-            direccion       : { required: true },
-            ocupacion       : { required: true },
+            nombre          : { required: true, minlength: 5, maxlength: 45 },
+            apellido        : { required: true, minlength: 5, maxlength: 45 },
             email           : { required: true, email: true },
-            telefono_area   : { required: true },
-            telefono_numero : { required: true },
-            celular         : { required: true },
-            tarjeta_tipo    : { required: true },
-            tarjeta_numero  : { required: true },
-            tarjeta_mes     : { required: true },
-            tarjeta_anio    : { required: true },
-            tarjeta_run     : { required: true },
-            nom_ape_tarjeta : { required: true }
+            region          : { required: true },
+            ciudad          : { required: true },
+            celular         : { required: true, number: true, minlength: 8, maxlength: 10  },
+            horario         : { required: true }
           },invalidHandler: function(event, validator) {
             $("#formulario p").hide();
           },unhighlight: function(element) {
