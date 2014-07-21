@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+      <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+      <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body class="unete">
     <div class="unete">
@@ -61,7 +67,7 @@
                   <li><input name="importe" type="radio" value="15000"><label for="">$ 15.000 ($500 diarios)</label></li>
                   <li><input name="importe" type="radio" value="0"><label for="">Otras donaciones</label></li>
                 </ul>
-                <input type="text" id="monto" name="Monto" placeholder="Monto" class="input_big input_text" style="display:none;" />
+                <input type="text" id="monto" name="Monto" placeholder="Monto" class="input_big input_text" style="display:none;" maxlength="10" />
               </div>
             </div>
             <div class="row">
@@ -112,12 +118,12 @@
               <div class="large-4 medium-6 small-12 columns">
                 <div class="fila">
                   <label for="" class="label_mobile">Nombre</label>
-                  <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" />
+                  <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" maxlength="100" onkeypress="return validatxt(event)" />
                   <p id ="error_nombre_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Apellido</label>
-                  <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" />
+                  <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" maxlength="100" onkeypress="return validatxt(event)" />
                   <p id ="error_apellido_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
@@ -596,12 +602,12 @@
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Comuna</label>
-                  <input type="text" name="comuna" placeholder="Ingresa comuna" class="input_big input_text" />
+                  <input type="text" name="comuna" placeholder="Ingresa comuna" class="input_big input_text" maxlength="50" />
                   <p id ="error_comuna_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Dirección</label>
-                  <input type="text" name="direccion" placeholder="Avenida o calle, número, piso, departamento" class="input_big input_text" />
+                  <input type="text" name="direccion" placeholder="Avenida o calle, número, piso, departamento" class="input_big input_text" maxlength="150"/>
                   <p id ="error_direccion_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
@@ -638,18 +644,18 @@
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Email</label>
-                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" />
+                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" maxlength="30" />
                   <p id ="error_email_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono fijo</label>
-                  <input type="text" name="telefono_area" placeholder="Cod" class="codigo input_text" />
-                  <input type="text" name="telefono_numero" placeholder="Escribe solo los 8 dígitos" class="input_fono input_text" />
+                  <input type="text" name="telefono_area" placeholder="Cod" class="codigo input_text" maxlength="3" onkeypress="return validanum(event)" />
+                  <input type="text" name="telefono_numero" placeholder="Escribe solo los 8 dígitos" class="input_fono input_text" maxlength="8" onkeypress="return validanum(event)" />
                   <p id ="error_telefono_fijo_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono móvil: 9</label>
-                  <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" />
+                  <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" maxlength="8" onkeypress="return validanum(event)" />
                   <p id ="error_celular_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
@@ -735,7 +741,7 @@
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Número de tarjeta</label>
-                  <input type="text" name="tarjeta_numero" placeholder="Sólo números, sin guiones" class="input_text input_big" />
+                  <input type="text" name="tarjeta_numero" placeholder="Sólo números, sin guiones" class="input_text input_big" maxlength="25" onkeypress="return validanum(event)" />
                   <p id ="error_tarjeta_numero_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila vencimiento">
@@ -790,7 +796,7 @@
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Nombre y Apellido</label>
-                  <input type="text" name="nom_ape_tarjeta" placeholder="Como aparece en la tarjeta" class="input_text input_big" />
+                  <input type="text" name="nom_ape_tarjeta" placeholder="Como aparece en la tarjeta" class="input_text input_big" maxlength="150"  onkeypress="return validatxt(event)" />
                   <p id ="error_nom_ape_tarjeta_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila cont_btnu">
@@ -840,6 +846,8 @@
     <script type="text/javascript" src="js/foundation.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/rem.min.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.js"></script>
     <script type="text/javascript">
     
       /*function detectmobile(a){  
@@ -852,6 +860,9 @@
 
       $(document).foundation();
       $( document ).ready(function(){
+
+        $('input, textarea').placeholder();
+
         var ventana_ancho = $(window).width();
         var dispositivo = "";
         if(ventana_ancho <= '623'){

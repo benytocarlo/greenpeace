@@ -223,7 +223,7 @@
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/foundation.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.js"></script>
     <script type="text/javascript">
     
       /*function detectmobile(a){  
@@ -236,6 +236,9 @@
 
       $(document).foundation();
       $( document ).ready(function(){
+
+        $('input, textarea').placeholder();
+
         var ventana_ancho = $(window).width();
         var dispositivo = "";
         if(ventana_ancho <= '640'){
@@ -327,5 +330,6 @@
       });
 
     </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
