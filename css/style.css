@@ -683,29 +683,23 @@ a{
 	margin-bottom: 5px;
 }
 
-#formulario strong{
+#formulario .error_mob,
+#formulario .error_desk{
 	clear: both;
+	display: none;
     font-size: 12px;
     line-height: 16px;
     margin: 5px 0;
 }
 
-#formulario .error_color{
-	background: #E5B3C7;
-	border: 1px solid #C1272D;
-}
-
-.error1 strong,
-.error2 strong{
-	display: none;
-}
-
-.error1{
+#formulario .error_desk{
+	line-height: 30px;
 	padding-left: 5px;
 }
 
-.error1 .fila{
-	height: 40px;
+#formulario .error{
+	background: #E5B3C7;
+	border: 1px solid #C1272D;
 }
 
 /*Queries*/
@@ -723,9 +717,9 @@ a{
 	}
 }
 
-@media (min-width: 1024px) {
-	#formulario strong{
-		line-height: 40px;
+@media (max-width: 1024px) {
+	#formulario .error_desk{
+		line-height: 16px;
 	}
 }
 
