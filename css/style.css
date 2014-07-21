@@ -296,6 +296,10 @@ a{
 	display: none;
 }
 
+.unete .footer2{
+	margin-top: 60px;
+}
+
 .footer2 p{
 	background: #077135;
 	font-size: 10px;
@@ -840,6 +844,9 @@ a{
 	}
 	.label_mobile{
 		display: block;
+	}
+	.cont_error_desk{
+		display: none;
 	}
 }
 
