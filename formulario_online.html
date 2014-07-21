@@ -41,7 +41,7 @@
         <div class="small-10 small-centered columns">
           <p class="fs48">¡ÚNETE AHORA!</p>
           <p>Únete hoy a Greenpeace para proteger y defender activamente el medio ambiente de los atentados y crímenes que se cometen en todo el mundo contra la Naturaleza. Súmate como socio y sé parte de los más de 2,8 millones de personas que en todo el mundo comparten contigo su pasión por la protección de nuestro planeta. Greenpeace es una organización independiente política y económicamente. Por esto Greenpeace no acepta dinero de empresas, gobiernos o partidos políticos. Sólo cuenta con el apoyo de personas como tú. ¡Súmate!</p>
-          <form id="formulario" name="formulario" action="https://unete.greenpeace.cl/FormMa/procesar_cupon.php" method="POST">
+          <form id="formulario" name="formulario" action="https://unete.greenpeace.cl/FormMa/procesar_cupon.php" method="POST" autocorrect="off" autocapitalize="off" autocomplete="off">
             <div class="row">
               <div class="small-12 medium-10 large-8 columns">
                 <h2>Autorizo el débito automático mensual de:</h2>
@@ -843,8 +843,8 @@
             $("#formulario p").hide();
           },unhighlight: function(element) {
             var error = element.name;
-            $("#error_"+error).fadeOut();
-            $("#"+error).removeClass("error");
+            $("#error_"+error+dispositivo).fadeOut();
+            $('input[name='+error+']').removeClass("error");
           },errorPlacement: function(error, element) {
             //console.log(element.attr("name"));
             var error = element.attr("name");
