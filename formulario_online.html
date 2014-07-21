@@ -659,7 +659,6 @@
                   <label for="" class="label_check">Ya he colaborado económicamente en alguna oportunidad con Greenpeace.</label>
                 </div>
               </div>
-              <div class="large-4 medium-2 small-12 columns end"></div>
               <div class="large-4 medium-2 small-12 columns cont_error_desk">
                 <div class="fila">
                   <p id ="error_nombre_desk" class="error_desk">Este campo es obligatorio.</p>
@@ -729,10 +728,12 @@
                   <select name="tarjeta_tipo" id="" class="select">
                     <option value="">Seleccione tarjeta</option>
                   </select>
+                  <p id ="error_tarjeta_tipo_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Número de tarjeta</label>
                   <input type="text" name="tarjeta_numero" placeholder="Sólo números, sin guiones" class="input_text input_big" />
+                  <p id ="error_tarjeta_numero_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila vencimiento">
                   <label for="" class="label_mobile">Fecha de vencimiento</label>
@@ -742,14 +743,17 @@
                   <select name="tarjeta_anio" id="" class="select">
                     <option value="" >Mes</option>
                   </select>
+                  <p id ="error_tarjeta_mes_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Rut</label>
                   <input type="text" id="textfield_input" name="tarjeta_run" placeholder="Sin puntos ni guión" class="input_text input_big" onblur="return Valida_Rut(this)" onkeypress="return letrasRut(event)" maxlength="9"/>
+                  <p id ="error_tarjeta_run_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Nombre y Apellido</label>
                   <input type="text" name="nom_ape_tarjeta" placeholder="Como aparece en la tarjeta" class="input_text input_big" />
+                  <p id ="error_nom_ape_tarjeta_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila cont_btnu">
                   <a class="btn_unete" href="#">Enviar</a>
@@ -758,7 +762,23 @@
                 <input type="hidden" name="referer" value="">
                 <input type="hidden" id="url_return" name="url_return" value="">
               </div>
-              <div class="medium-2 columns end"></div>
+              <div class="small-12 medium-2 large-4 columns cont_error_desk">
+                <div class="fila">
+                  <p id ="error_tarjeta_tipo_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_tarjeta_numero_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_tarjeta_mes_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_tarjeta_run_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_nom_ape_tarjeta_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+              </div>
             </div>
           </form>
         </div>
