@@ -670,7 +670,7 @@
                   <p id ="error_sexo_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_dia_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id ="error_fech_nac_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <p id ="error_pais_desk" class="error_mob">Este campo es obligatorio.</p>
@@ -881,6 +881,7 @@
             if (error=="dia" && !$("select[name='mes']").hasClass("error") && !$("select[name='anio']").hasClass("error") ){ $("#error_fech_nac"+dispositivo).fadeOut(); }
             if (error=="mes" && !$("select[name='dia']").hasClass("error") && !$("select[name='anio']").hasClass("error")){ $("#error_fech_nac"+dispositivo).fadeOut(); }
             if (error=="anio" && !$("select[name='mes']").hasClass("error") && !$("select[name='dia']").hasClass("error") ){ $("#error_fech_nac"+dispositivo).fadeOut(); }
+
           },errorPlacement: function(error, element) {
             //console.log(element.attr("name"));
             var error = element.attr("name");
