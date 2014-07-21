@@ -714,7 +714,29 @@ a{
 	height: 40px;
 }
 
+.llame{
+	font-size: 27px;
+	line-height: 31px;
+	margin: 20px 0;
+}
+
+.cont_check{
+	font-size: 13px;
+	line-height: 17px;
+}
+
+.cont_check li{
+	margin-bottom: 10px;
+}
+
 /*Queries*/
+
+@media (max-width: 1500px) {
+	.cont_check .right,
+	.cont_check .left{
+		float: none !important;
+	}
+}
 
 @media (max-width: 1300px) {
 	.monto .right,
