@@ -113,10 +113,12 @@
                 <div class="fila">
                   <label for="" class="label_mobile">Nombre</label>
                   <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" />
+                  <p id ="error_nombre_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Apellido</label>
                   <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" />
+                  <p id ="error_apellido_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Sexo</label>
@@ -125,6 +127,7 @@
                     <option value="M">Masculino</option>
                     <option value="F">Femenino</option>
                   </select>
+                  <p id ="error_sexo_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila nacimiento">
                   <label for="" class="label_mobile">Fecha de Nacimiento</label>
@@ -281,6 +284,7 @@
                     <option value="2009">2009</option>
                     <option value="2010">2010</option>
                   </select>
+                  <p id ="error_dia_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">País</label>
@@ -562,6 +566,7 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                   </select>
+                  <p id ="error_pais_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Región</label>
@@ -587,16 +592,19 @@
                     <option value="AYSÉN">AYSÉN</option>
                     <option value="MAGALLANES">MAGALLANES</option>
                   </select>
+                  <p id ="error_region_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Comuna</label>
                   <select name="comuna" id="" class="select">
                     <option value="" selected="">-</option>
                   </select>
+                  <p id ="error_comuna_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Dirección</label>
                   <input type="text" name="direccion" placeholder="Avenida o calle, número, piso, departamento" class="input_big input_text" />
+                  <p id ="error_direccion_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Profesión</label>
@@ -628,19 +636,23 @@
                     <option value="Veterinario">Veterinario</option>
                     <option value="Otros">Otros</option>
                   </select>
+                  <p id ="error_ocupacion_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Email</label>
                   <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" />
+                  <p id ="error_email_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono fijo</label>
                   <input type="text" name="telefono_area" placeholder="Cod" class="codigo input_text" />
                   <input type="text" name="telefono_numero" placeholder="Escribe solo los 8 dígitos" class="input_fono input_text" />
+                  <p id ="error_telefono_numero_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono móvil: 9</label>
                   <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" />
+                  <p id ="error_celular_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <input type="checkbox" id="checkbox_input" name="__ya_colabore" value="" class="left" />
@@ -648,6 +660,44 @@
                 </div>
               </div>
               <div class="large-4 medium-2 small-12 columns end"></div>
+              <div class="large-4 medium-2 small-12 columns">
+                <div class="fila">
+                  <p id ="error_nombre_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_apellido_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_sexo_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_dia_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_pais_desk" class="error_mob">Este campo es obligatorio.</p>
+                </div>               
+                <div class="fila">
+                  <p id ="error_region_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_comuna_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_direccion_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_ocupacion_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_email_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_telefono_numero_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id ="error_celular_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+              </div>
             </div>
             <div class="row">
               <div class="small-12 medium-10 large-8 columns">
@@ -744,13 +794,13 @@
 
       $(document).foundation();
       $( document ).ready(function(){
-        var mobile = false;
         var ventana_ancho = $(window).width();
         var ventana_alto = $(window).height();
         if(ventana_ancho <= '640'){
-          mobile = true;
+          var dispositivo = "_mob";
+        }else{
+          var dispositivo = "_desk";
         }
-        alert(mobile+"--"+ventana_ancho);
         //var mobile = detectmobile(navigator.userAgent||navigator.vendor||window.opera);
 
         $('input[name=importe]').click(function(){
@@ -796,9 +846,9 @@
             $("#error_"+error).fadeOut();
             $("#"+error).removeClass("error");
           },errorPlacement: function(error, element) {
-            //console.log(element);
+            //console.log(element.attr("name"));
             var error = element.attr("name");
-            $("#error_"+error).fadeIn();
+            $("#error_"+error+dispositivo).fadeIn();
           }
         });
 
