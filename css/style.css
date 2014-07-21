@@ -815,6 +815,12 @@ a{
 	}
 }
 
+/*@media (min-width: 640px) {
+	.error_mob{
+		display: none !important;
+	}
+}*/
+
 @media (max-width: 640px) {
 	.anios{
 		width: 20%;
