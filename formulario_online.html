@@ -796,7 +796,7 @@
       $( document ).ready(function(){
         var ventana_ancho = $(window).width();
         var dispositivo = "";
-        if(ventana_ancho <= '640'){
+        if(ventana_ancho <= '623'){
           dispositivo = "_mob";
         }else{
           dispositivo = "_desk";
@@ -804,7 +804,7 @@
 
         $( window ).resize(function() {
           var ventana_ancho_rz = $(window).width();
-          if(ventana_ancho_rz <= '640'){
+          if(ventana_ancho_rz <= '623'){
             dispositivo = "_mob";
           }else{
             dispositivo = "_desk";
@@ -853,10 +853,14 @@
             $("#formulario p").hide();
           },unhighlight: function(element) {
             var error = element.name;
+            console.log(element.name);
             $("#error_"+error+dispositivo).fadeOut();
-            if (error=="dia" && error=="mes" && error=="anio" ){ $("#error_fech_nac"+dispositivo).fadeOut(); }
             $('input[name='+error+']').removeClass("error");
             $('select[name='+error+']').removeClass("error");
+
+            if (error=="dia" && !$("select[name='mes']").hasClass("error") && !$("select[name='anio']").hasClass("error") ){ $("#error_fech_nac"+dispositivo).fadeOut(); }
+            if (error=="mes" && !$("select[name='dia']").hasClass("error") && !$("select[name='anio']").hasClass("error")){ $("#error_fech_nac"+dispositivo).fadeOut(); }
+            if (error=="anio" && !$("select[name='mes']").hasClass("error") && !$("select[name='dia']").hasClass("error") ){ $("#error_fech_nac"+dispositivo).fadeOut(); }
           },errorPlacement: function(error, element) {
             //console.log(element.attr("name"));
             var error = element.attr("name");
