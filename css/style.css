@@ -683,6 +683,10 @@ a{
 	margin-bottom: 5px;
 }
 
+#formulario strong{
+	display: none !important;
+}
+
 #formulario .error_mob,
 #formulario .error_desk{
 	clear: both;
@@ -700,6 +704,10 @@ a{
 #formulario .error{
 	background: #E5B3C7;
 	border: 1px solid #C1272D;
+}
+
+.cont_error_desk .fila{
+	height: 40px;
 }
 
 /*Queries*/
