@@ -284,7 +284,7 @@
                     <option value="2009">2009</option>
                     <option value="2010">2010</option>
                   </select>
-                  <p id ="error_dia_mob" class="error_mob">Este campo es obligatorio.</p>
+                  <p id ="error_fech_nac_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">País</label>
@@ -795,12 +795,22 @@
       $(document).foundation();
       $( document ).ready(function(){
         var ventana_ancho = $(window).width();
-        var ventana_alto = $(window).height();
+        var dispositivo = "";
         if(ventana_ancho <= '640'){
-          var dispositivo = "_mob";
+          dispositivo = "_mob";
         }else{
-          var dispositivo = "_desk";
+          dispositivo = "_desk";
         }
+
+        $( window ).resize(function() {
+          var ventana_ancho_rz = $(window).width();
+          if(ventana_ancho_rz <= '640'){
+            dispositivo = "_mob";
+          }else{
+            dispositivo = "_desk";
+          }
+
+        });
         //var mobile = detectmobile(navigator.userAgent||navigator.vendor||window.opera);
 
         $('input[name=importe]').click(function(){
@@ -844,11 +854,14 @@
           },unhighlight: function(element) {
             var error = element.name;
             $("#error_"+error+dispositivo).fadeOut();
+            if (error=="dia" && error=="mes" && error=="anio" ){ $("#error_fech_nac"+dispositivo).fadeOut(); }
             $('input[name='+error+']').removeClass("error");
+            $('select[name='+error+']').removeClass("error");
           },errorPlacement: function(error, element) {
             //console.log(element.attr("name"));
             var error = element.attr("name");
             $("#error_"+error+dispositivo).fadeIn();
+            if (error=="dia" ||error=="mes" ||error=="anio" ){ $("#error_fech_nac"+dispositivo).fadeIn(); }
           }
         });
 
