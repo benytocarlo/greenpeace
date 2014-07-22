@@ -58,6 +58,11 @@
             </div>
             <div class="row">
               <div class="small-12 medium-6 large-4 large-centered columns fila monto">
+                <div class="error error_envio">
+                  <p>Oh! Ha courrido un error!</p>
+                  <p>El envío de la solicitud no pudo procesarse correctamente</p>
+                  <a href="" class="cerrar">X</a>
+                </div>
                 <ul class="left">
                   <li><input name="importe" type="radio" value="6000"><label for="">$ 6.000 ($200 diarios)</label></li>
                   <li><input name="importe" type="radio" value="7500" checked><label for="">$ 7.500 ($250 diarios)</label></li>
@@ -860,6 +865,11 @@
 
       $(document).foundation();
       $( document ).ready(function(){
+
+        $('.cerrar').click(function(e) {
+          e.preventDefault();
+          $('.error_envio').fadeOut('fast');
+        });
 
         var ventana_ancho = $(window).width();
         var dispositivo = "";
