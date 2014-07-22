@@ -849,9 +849,6 @@
     <script type="text/javascript" src="js/jquery.placeholder.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript">
-      $.validator.addMethod("validaRut", function(value, element) {
-        return Valida_Rut(element);
-      });
 
       $(document).foundation();
       $( document ).ready(function(){
@@ -901,7 +898,7 @@
             comuna          : { required: true },
             direccion       : { required: true },
             ocupacion       : { required: true },
-            email           : { required: true, email: true },
+            email           : { required: true, validEmail: true },
             telefono_area   : { required: true },
             telefono_numero : { required: true },
             celular         : { required: true },
