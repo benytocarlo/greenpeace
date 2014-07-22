@@ -46,7 +46,8 @@
       largo = crut.length;
       if ( largo <2 )
       {
-        alert('rut inválido')
+        //alert('rut inválido')
+        $(Objeto).addClass("error");
         Objeto.focus()
         return false;
       }

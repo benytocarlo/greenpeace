@@ -792,7 +792,7 @@
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Rut</label>
-                  <input type="text" id="textfield_input" name="tarjeta_run" placeholder="Sin puntos ni guión" class="input_text input_big" onkeyup="return Valida_Rut(this)" onkeypress="return letrasRut(event)" maxlength="9"/>
+                  <input type="text" id="tarjeta_run" name="tarjeta_run" placeholder="Sin puntos ni guión" class="input_text input_big" onkeyup="return Valida_Rut(this)" onkeypress="return letrasRut(event)" maxlength="9"/>
                   <p id="error_tarjeta_run_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
@@ -849,6 +849,9 @@
     <script type="text/javascript" src="js/jquery.placeholder.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript">
+      $.validator.addMethod("validaRut", function(value, element) {
+        return Valida_Rut(element);
+      });
 
       $(document).foundation();
       $( document ).ready(function(){
@@ -906,7 +909,7 @@
             tarjeta_numero  : { required: true },
             tarjeta_mes     : { required: true },
             tarjeta_anio    : { required: true },
-            tarjeta_run     : { required: true },
+            tarjeta_run     : { required: true , validaRut : $("#tarjeta_run").val() },
             nom_ape_tarjeta : { required: true }
           },invalidHandler: function(event, validator) {
             //$("#formulario p").hide();
