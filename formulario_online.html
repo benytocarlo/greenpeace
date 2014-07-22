@@ -109,13 +109,7 @@
                   <label for="" class="right">Dirección</label>
                 </div>
                 <div class="fila">
-                  <label for="" class="right">Profesión</label>
-                </div>
-                <div class="fila">
                   <label for="" class="right">Email</label>
-                </div>
-                <div class="fila">
-                  <label for="" class="right">Teléfono fijo</label>
                 </div>
                 <div class="fila">
                   <label for="" class="right">Teléfono móvil: 9</label>
@@ -617,47 +611,9 @@
                   <p id ="error_direccion_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <label for="" class="label_mobile">Profesión</label>
-                  <select name="ocupacion" id="" class="select">
-                    <option value="" selected="">-</option>
-                    <option value="" selected=""></option>
-                    <option value="Abogado">Abogado</option>
-                    <option value="Administrativo">Administrativo</option>
-                    <option value="Arquitecto">Arquitecto</option>
-                    <option value="Artista">Artista</option>
-                    <option value="Asistente Social">Asistente Social</option>
-                    <option value="Comerciante/Ventas">Comerciante/Ventas</option>
-                    <option value="Contador/Auditor">Contador/Auditor</option>
-                    <option value="Diseñador">Diseñador</option>
-                    <option value="Dueño/a de Casa">Dueño/a de Casa</option>
-                    <option value="Empleado Público">Empleado Público</option>
-                    <option value="Estudiante">Estudiante</option>
-                    <option value="Independiente">Independiente</option>
-                    <option value="Ingeniero">Ingeniero</option>
-                    <option value="Pensionado/a">Pensionado/a</option>
-                    <option value="Médico">Médico</option>
-                    <option value="Periodista">Periodista</option>
-                    <option value="Profesor Colegio/Universidad">Profesor Colegio/Universidad</option>
-                    <option value="Psicólogo">Psicólogo</option>
-                    <option value="Publicista o Marketing">Publicista o Marketing</option>
-                    <option value="Secretariado/Recepcionista">Secretariado/Recepcionista</option>
-                    <option value="Sociólogo">Sociólogo</option>
-                    <option value="Técnico Universitario">Técnico Universitario</option>
-                    <option value="Veterinario">Veterinario</option>
-                    <option value="Otros">Otros</option>
-                  </select>
-                  <p id ="error_ocupacion_mob" class="error_mob">Este campo es obligatorio.</p>
-                </div>
-                <div class="fila">
                   <label for="" class="label_mobile">Email</label>
                   <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" maxlength="30" />
                   <p id ="error_email_mob" class="error_mob">Este campo es obligatorio.</p>
-                </div>
-                <div class="fila">
-                  <label for="" class="label_mobile">Teléfono fijo</label>
-                  <input type="text" name="telefono_area" placeholder="Cod" class="codigo input_text" maxlength="3" onkeypress="return validanum(event)" />
-                  <input type="text" name="telefono_numero" placeholder="Escribe solo los 8 dígitos" class="input_fono input_text" maxlength="8" onkeypress="return validanum(event)" />
-                  <p id ="error_telefono_fijo_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono móvil: 9</label>
@@ -695,13 +651,7 @@
                   <p id="error_direccion_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id="error_ocupacion_desk" class="error_desk">Este campo es obligatorio.</p>
-                </div>
-                <div class="fila">
                   <p id="error_email_desk" class="error_desk">Este campo es obligatorio.</p>
-                </div>
-                <div class="fila">
-                  <p id="error_telefono_fijo_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <p id="error_celular_desk" class="error_desk">Este campo es obligatorio.</p>
@@ -909,8 +859,6 @@
             direccion       : { required: true },
             ocupacion       : { required: true },
             email           : { required: true, validEmail: true },
-            telefono_area   : { required: true },
-            telefono_numero : { required: true },
             celular         : { required: true },
             tarjeta_tipo    : { required: true },
             tarjeta_numero  : { required: true },
@@ -929,8 +877,7 @@
             if (error=="dia" && !$("select[name='mes']").hasClass("error") && !$("select[name='anio']").hasClass("error") ){ $("#error_fech_nac"+dispositivo).fadeOut(); }
             if (error=="mes" && !$("select[name='dia']").hasClass("error") && !$("select[name='anio']").hasClass("error")){ $("#error_fech_nac"+dispositivo).fadeOut(); }
             if (error=="anio" && !$("select[name='mes']").hasClass("error") && !$("select[name='dia']").hasClass("error") ){ $("#error_fech_nac"+dispositivo).fadeOut(); }
-            if (error=="telefono_area" && !$("input[name='telefono_numero']").hasClass("error")  ){ $("#error_telefono_fijo"+dispositivo).fadeOut(); }
-            if (error=="telefono_numero" && !$("input[name='telefono_area']").hasClass("error")  ){ $("#error_telefono_fijo"+dispositivo).fadeOut(); }
+
             if (error=="tarjeta_mes" && !$("select[name='tarjeta_anio']").hasClass("error")  ){ $("#error_tarjeta_vencimiento"+dispositivo).fadeOut(); }
             if (error=="tarjeta_anio" && !$("select[name='tarjeta_mes']").hasClass("error")  ){ $("#error_tarjeta_vencimiento"+dispositivo).fadeOut(); }
 
@@ -940,7 +887,6 @@
             var error = element.attr("name");
             $("#error_"+error+dispositivo).fadeIn();
             if (error=="dia" || error=="mes" || error=="anio" ){ $("#error_fech_nac"+dispositivo).fadeIn(); }
-            if (error=="telefono_area" || error=="telefono_numero" ){ $("#error_telefono_fijo"+dispositivo).fadeIn(); }
             if (error=="tarjeta_mes" || error=="tarjeta_anio" ){ $("#error_tarjeta_vencimiento"+dispositivo).fadeIn(); }
           }
         });
