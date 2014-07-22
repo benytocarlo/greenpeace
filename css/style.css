@@ -391,35 +391,17 @@ a{
 }
 
 .header_login2{
-	background: url('../images/mas_mini.png') no-repeat 312px center #314545;
+	background: url('../images/mas_mini.png') no-repeat 225px center #314545;
 	bottom: 0;
+	color: #fff;
 	cursor: pointer;
+	display: block;
 	padding: 15px 20px; 
     position: fixed;
     right: 8.4%;
     top: auto;
-    width: 350px;
+    width: 260px;
     z-index: 1;
-}
-
-.header_login3{
-	background: url('../images/mas_mini.png') no-repeat 182px center #314545;
-	bottom: 0;
-	cursor: pointer;
-	display: none;
-	float: right;
-	padding: 5px 20px;
-    width: 220px;
-    z-index: 1;
-}
-
-.header_login3 a{
-	color: #fff;
-}
-
-.header_login3 h2{
-	font-size: 14px;
-	line-height: 18px;
 }
 
 .header_login{
@@ -850,9 +832,6 @@ a{
 	}
 	.header_login2{
 		display: none;
-	}
-	.header_login3{
-		display: block;
 	}
 	.cont_right{
 		padding-bottom: 0;
