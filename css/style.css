@@ -729,7 +729,46 @@ a{
 	margin-bottom: 10px;
 }
 
-.placeholder { color: #B3B3B3; }
+.hasPlaceholder { color: #B3B3B3; }
+
+.error_envio{
+	color: #C1272D;
+	display: none;
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	padding: 10px;
+	position: relative;
+}
+
+.error_envio a{
+	color: #C1272D;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.cont_gracias{
+	margin: 120px 0 40px 0;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.gracias1{
+	font-size: 48px;
+	line-height: 52px;
+	margin-bottom: 20px;
+}
+
+.gracias2{
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.fixed{
+	bottom: 0;
+	position: fixed;
+}
 
 /*Queries*/
 
