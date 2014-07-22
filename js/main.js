@@ -99,7 +99,7 @@
         //Objeto.classList.add("error") la funcion classList no funciona en IE9 IE8 http://caniuse.com/classlist
         return false;
       }
-	  $(Objeto).addClass("error");
+	  $(Objeto).removeClass("error");
       //Objeto.classList.remove("error"); 
       return true;
     }
