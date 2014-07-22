@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
     <title>Greenpeace | 20 años</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr.js"></script>
+    <!--[if lt IE 9]>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/nwmatcher/1.2.5/nwmatcher.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
   </head>
   <body class="unete">
     <div class="unete">
@@ -650,7 +657,7 @@
                 <div class="fila">
                   <label for="" class="label_mobile">Teléfono móvil: 9</label>
                   <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" maxlength="8" onkeypress="return validanum(event)" />
-                  <p id ="error_celular_mob" class="error_mob">Este campo es obligatorio.</p>
+                  <p id ="error_celular_mob" class="error_mob">Este id=campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <input type="checkbox" id="checkbox_input" name="__ya_colabore" value="" class="left" />
@@ -659,40 +666,40 @@
               </div>
               <div class="large-4 medium-2 small-12 columns cont_error_desk">
                 <div class="fila">
-                  <p id ="error_nombre_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_nombre_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_apellido_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_apellido_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_sexo_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_sexo_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_fech_nac_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_fech_nac_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_pais_desk" class="error_mob">Este campo es obligatorio.</p>
+                  <p id="error_pais_desk" class="error_mob">Este campo es obligatorio.</p>
                 </div>               
                 <div class="fila">
-                  <p id ="error_region_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_region_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_comuna_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_comuna_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_direccion_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_direccion_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_ocupacion_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_ocupacion_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_email_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_email_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_telefono_fijo_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_telefono_fijo_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_celular_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_celular_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
               </div>
             </div>
@@ -731,12 +738,12 @@
                     <option value=" Magna"> Magna</option>
                     <option value=" Diners"> Diners</option>
                   </select>
-                  <p id ="error_tarjeta_tipo_mob" class="error_mob">Este campo es obligatorio.</p>
+                  <p id="error_tarjeta_tipo_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Número de tarjeta</label>
                   <input type="text" name="tarjeta_numero" placeholder="Sólo números, sin guiones" class="input_text input_big" maxlength="25" onkeypress="return validanum(event)" />
-                  <p id ="error_tarjeta_numero_mob" class="error_mob">Este campo es obligatorio.</p>
+                  <p id="error_tarjeta_numero_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila vencimiento">
                   <label for="" class="label_mobile">Fecha de vencimiento</label>
@@ -781,12 +788,12 @@
                     <option value="2029">2029</option>
                     <option value="2030">2030</option>
                   </select>
-                  <p id ="error_tarjeta_vencimiento_mob" class="error_mob">Este campo es obligatorio.</p>
+                  <p id="error_tarjeta_vencimiento_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Rut</label>
                   <input type="text" id="textfield_input" name="tarjeta_run" placeholder="Sin puntos ni guión" class="input_text input_big" onblur="return Valida_Rut(this)" onkeypress="return letrasRut(event)" maxlength="9"/>
-                  <p id ="error_tarjeta_run_mob" class="error_mob">Este campo es obligatorio.</p>
+                  <p id="error_tarjeta_run_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Nombre y Apellido</label>
@@ -802,19 +809,19 @@
               </div>
               <div class="small-12 medium-2 large-4 columns cont_error_desk">
                 <div class="fila">
-                  <p id ="error_tarjeta_tipo_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_tarjeta_tipo_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_tarjeta_numero_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_tarjeta_numero_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_tarjeta_vencimiento_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_tarjeta_vencimiento_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_tarjeta_run_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_tarjeta_run_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <p id ="error_nom_ape_tarjeta_desk" class="error_desk">Este campo es obligatorio.</p>
+                  <p id="error_nom_ape_tarjeta_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
               </div>
             </div>
@@ -839,6 +846,7 @@
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/foundation.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/jquery.placeholder.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.placeholder.js"></script>
     <script type="text/javascript">
