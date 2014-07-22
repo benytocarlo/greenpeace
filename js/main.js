@@ -46,7 +46,8 @@
       largo = crut.length;
       if ( largo <2 )
       {
-        alert('rut inválido')
+        //alert('rut inválido')
+        $(Objeto).addClass("error");
         Objeto.focus()
         return false;
       }
@@ -99,7 +100,7 @@
         //Objeto.classList.add("error") la funcion classList no funciona en IE9 IE8 http://caniuse.com/classlist
         return false;
       }
-	  $(Objeto).addClass("error");
+	  $(Objeto).removeClass("error");
       //Objeto.classList.remove("error"); 
       return true;
     }
