@@ -910,6 +910,10 @@ a{
 	.img_mobile{
 		display: block;
 	}
+	.cont_interior h4{
+		font-size: 14px;
+		line-height: 18px;
+	}
 }
 
 @media (max-width: 540px) {
