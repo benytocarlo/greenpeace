@@ -752,6 +752,10 @@ a{
 	position: fixed;
 }
 
+.img_mobile{
+	display: none;
+}
+
 /*Queries*/
 
 @media (max-width: 1500px) {
@@ -895,6 +899,12 @@ a{
 	}
 	.cont_error_desk{
 		display: none;
+	}
+	.img_desktop{
+		display: none;
+	}
+	.img_mobile{
+		display: block;
 	}
 }
 
