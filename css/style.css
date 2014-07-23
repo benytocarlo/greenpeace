@@ -915,6 +915,10 @@ a{
 	width: 40%;
 }
 
+.txt_mob{
+	display: none;
+}
+
 /*Queries*/
 
 @media (max-width: 1500px) {
@@ -1169,6 +1173,43 @@ a{
 		font-size: 14px;
 		line-height: 18px;
 	}
+	.txt_desk{
+		display: none;
+	}
+	.txt_mob{
+		display: block;
+	}
+	.bosque1 .cont_izq{
+		margin-right: 1%;
+		width: 49%;
+	}
+	.indigena {
+    	width: 50%;
+	}
+	.bosque1 h1 {
+    	font-size: 40px;
+    	line-height: 70px;
+    	margin-right: 5px;
+	}
+	.bosque1 h2 {
+    	font-size: 22px;
+    	line-height: 18px;
+    	padding-top: 20px;
+	}
+	.fs33 {
+    	font-size: 14px;
+    	line-height: 18px;
+	}
+	.bosque1{
+		padding-top: 0;
+	}
+	.hoja{
+		display: none;
+	}
+	.des_txt1{
+		font-size: 14px;
+		line-height: 18px;
+	}
 }
 
 @media (max-width: 540px) {
@@ -1193,5 +1234,29 @@ a{
 	}
 	.grafico2{
 		display: block;
+	}
+}
+
+@media (max-width: 405px) {
+	.indigena {
+    	padding-top: 5%;
+	}
+}
+
+@media (max-width: 370px) {
+	.indigena {
+    	padding-top: 10%;
+	}
+}
+
+@media (max-width: 350px) {
+	.indigena {
+    	padding-top: 15%;
+	}
+}
+
+@media (max-width: 320px) {
+	.indigena {
+    	padding-top: 20%;
 	}
 }
