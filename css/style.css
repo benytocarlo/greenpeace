@@ -760,12 +760,174 @@ a{
 	display: none;
 }
 
+.cont_info_bosque{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+  	font-weight: 300;
+}
+
+.cont_info_bosque h1{
+	color: #CEE11C;
+	font-size: 136px;
+	font-style: italic;
+  	font-weight: 700;
+	line-height: 140px;
+}
+
+.cont_info_bosque h2{
+	color: #CEE11C;
+	font-size: 50px;
+	font-style: italic;
+  	font-weight: 700;
+	line-height: 54px;
+	overflow: hidden;
+}
+
+.fs33{
+	font-size: 33px;
+	line-height: 43px;
+}
+
+.bosque1{
+	padding-top: 20px;
+}
+
+.bosque1 h1{
+	float: left;
+	margin-right: 10px;
+}
+
+.verde_claro{
+	background: #3D7776;
+}
+
+.bosque1 h2{
+	float: left;
+	line-height: 40px;
+	margin-right: 10px;
+	padding-top: 24px;
+}
+
+.bosque1 .cont_izq{
+	width: 60%;
+}
+
+.hoja{
+	padding-top: 38px;
+}
+
+.des_txt1{
+	clear: both;
+	color: #fff;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.cont_der{
+	overflow: hidden;
+}
+
+.bosque2{
+	padding-top: 20px;
+}
+
+.bosque2 .cont_der{
+	left: 30%;
+	position: absolute;
+	width: 50%;
+}
+
+.bosque2 h2{
+	line-height: 65px;
+}
+
+.bosque2 .cont_der .des_txt1{
+	padding-left: 80px;
+}
+
+.bosque3,
+.bosque4,
+.bosque5{
+	padding: 20px 0;
+}
+
+.bosque3 .percent{
+	float: left;
+	font-size: 95px;
+	line-height: 99px;
+	margin-right: 10px;
+}
+
+.bosque3 .fs34{
+	font-size: 34px;
+	line-height: 38px;
+	padding-top: 12px;
+}
+
+.bosque4 h1{
+	font-size: 60px;
+	line-height: 64px;
+}
+
+.bosque4 h2{
+	color: #fff;
+	font-size: 40px;
+	line-height: 44px;
+}
+
+.mr20{
+	padding-right: 20px;
+}
+
+.bosque5{
+	overflow: hidden;
+}
+
+.bosque5 .cont_izq{
+	width: 60%;
+}
+
+.bosque5 .cont_izq h1{
+	font-size: 80px;
+	line-height: 84px;
+	margin-right: 10px;
+}
+
+.bosque5 .cont_izq h2{
+	font-size: 40px;
+	line-height: 44px;
+	margin-right: 5px;
+}
+
+.bosque5 .cont_izq  .des_txt1{
+	clear: none;
+	font-style: italic;
+  	font-weight: 600;
+}
+
+.bosque5 .txt_right{
+	padding-top: 10px;
+}
+
+.abs_left{
+	position: absolute;
+	left: 32%;
+	width: 40%;
+}
+
 /*Queries*/
 
 @media (max-width: 1500px) {
 	.cont_check .right,
 	.cont_check .left{
 		float: none !important;
+	}
+	.bosque5 .cont_izq h2{
+		font-size: 30px;
+		line-height: 34px;
+	}
+	.abs_left{
+		padding-top: 1.5%;
 	}
 }
 
@@ -774,11 +936,37 @@ a{
 	.monto .left{
 		float: none !important;
 	}
+	.hoja{
+		padding-top: 30px;
+	}
+	.bosque2 .cont_der{
+		left: 30%;
+	}
+}
+
+@media (max-width: 1280px) {	
+	.des_txt1{
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+@media (max-width: 1220px) {
+	.hoja {
+    	padding-top: 20px;
+    	width: 12%;
+	}
+	.indigena{
+		width: 25%;
+	}
 }
 
 @media (max-width: 1120px) {
 	.cont_left .fs34{
 		font-size: 32px;
+	}
+	.bosque2 .cont_der{
+		left: 40%;
 	}
 }
 
@@ -786,9 +974,15 @@ a{
 	#formulario .error_desk{
 		line-height: 16px;
 	}
-}
-
-@media (max-width: 1024px) {
+	.tronco{
+		width: 50%;
+	}
+	.bosque2{
+		padding-top: 40px;
+	}
+	.bosque2 .cont_der{
+		margin-top: -25px;
+	}
 	.verde{
 		height: 100% !important;
 	}
@@ -847,12 +1041,73 @@ a{
 	.monto {
     	margin-left: 34%;
 	}
+	.bosque5 .cont_izq h1{
+		font-size: 60px;
+		line-height: 64px;
+	}
+	.abs_left{
+		position: inherit;
+		width: 100%;
+	}
+	.bosque5 .cont_izq h2{
+		font-size: 23px;
+		line-height: 27px;
+	}
 }
 
 @media (max-width: 1025px) {
 	.nacimiento input, 
 	.nacimiento select{
 		width: 32.8%;
+	}
+	.bosque1 .cont_der{
+		left: 50%;
+	}
+	.bosque1 h1{
+		font-size: 66px;
+		line-height: 100px;
+	}
+	.bosque1 h2{
+		font-size: 30px;
+		line-height: 22px;
+	}
+	.fs33{
+		font-size: 20px;
+		line-height: 27px;
+	}
+}
+
+@media (max-width: 920px) {
+	.bosque2 .cont_der{
+		left: 30%;
+		width: 70%;
+	}
+	.bosque2{
+		padding-top: 60px;
+	}
+	.bosque2 .cont_der {
+    	margin-top: -55px;
+	}
+}
+
+@media (max-width: 880px) {
+	.bosque3 h2{
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.bosque3 .fs34{
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.bosque3 .percent{
+		font-size: 70px;
+		line-height: 74px;
+	}
+}
+
+@media (max-width: 860px) {
+	.indigena{
+		width: 35%;
 	}
 }
 
