@@ -1124,12 +1124,6 @@ a{
 	}
 }
 
-/*@media (min-width: 640px) {
-	.error_mob{
-		display: none !important;
-	}
-}*/
-
 @media (max-width: 640px) {
 	.anios{
 		width: 20%;
@@ -1183,7 +1177,7 @@ a{
 		margin-right: 1%;
 		width: 49%;
 	}
-	.indigena {
+	.img50 {
     	width: 50%;
 	}
 	.bosque1 h1 {
@@ -1209,6 +1203,56 @@ a{
 	.des_txt1{
 		font-size: 14px;
 		line-height: 18px;
+	}
+	.bosque2 .cont_der{
+		width: 73%;
+	}
+	.bosque2 h2{
+		font-size: 32px;
+		line-height: 44px;
+	}
+	.bosque2 .cont_der .des_txt1{
+		padding-left: 0;
+	}
+	.bosque2 {
+    	padding-top: 100px;
+	}
+	.bosque2 .cont_der {
+    	margin-top: -90px;
+	}
+	.bosque2 .cont_der{
+		left: 28%;
+	}
+	.bosque3 .percent {
+    	float: none;
+	}
+	.mundo{
+		position: absolute;
+		right: 0;
+		width: 32%;
+	}
+	.bosque4 h1 {
+    	font-size: 31px;
+    	line-height: 35px;
+	}
+	.bosque4 h2{
+		font-size: 17px;
+    	line-height: 21px;
+	}
+	.bosque4 .mr20 {
+    	padding-right: 10px;
+	}
+	.bosque5 .cont_izq{
+		padding-top: 20%;
+    	width: 100%;
+	}
+	.bosque5 .mapa{
+		padding-top: 0;
+		position: absolute;
+		right: 0;
+	}
+	.bosque5 .cont_izq h2{
+		width: 80%;
 	}
 }
 
@@ -1241,6 +1285,30 @@ a{
 	.indigena {
     	padding-top: 5%;
 	}
+	.bosque3 h2 {
+    	font-size: 20px;
+    	line-height: 24px;
+	}
+	.bosque3 .percent {
+		color: #fff;
+    	font-size: 50px;
+    	line-height: 54px;
+	}
+	.bosque3 .fs34 {
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 10px;
+   		padding-top: 0;
+	}
+	.mundo{
+		width: 35%;
+	}
+	.bosque5 .mapa{
+		width: 60%;
+	}
+	.bosque5 .cont_izq {
+    	padding-top: 38%;
+	}
 }
 
 @media (max-width: 370px) {
@@ -1256,7 +1324,11 @@ a{
 }
 
 @media (max-width: 320px) {
-	.indigena {
-    	padding-top: 20%;
+	.des_txt1{
+		font-size: 13px;
+		line-height: 17px;
+	}
+	.mundo{
+		width: 45%;
 	}
 }
