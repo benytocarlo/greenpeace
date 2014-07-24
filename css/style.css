@@ -408,6 +408,12 @@ a{
     z-index: 1;
 }
 
+.header_login2:hover{
+	background: url('../images/mas_mini_verde.png') no-repeat 225px center #fff;
+	border: 1px solid #314545;
+	color: #314545;
+}
+
 .header_login{
 	background: url('../images/menos_mini.png') no-repeat 312px center #314545;
 	cursor: pointer;
@@ -1022,6 +1028,22 @@ a{
 	line-height: 57px;
 }
 
+.footer2 .sumate{
+	background: #314545;
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	line-height: 24px;
+	margin: -33px auto 0;
+	padding: 5px 0;
+	text-align: center;
+	width: 216px;
+}
+
+.footer2 .sumate img{
+	padding-left: 20px;
+}
+
 /*Queries*/
 
 @media (max-width: 1500px) {
@@ -1110,6 +1132,7 @@ a{
 	}
 	.footer2{
 		display: block;
+		margin-top: 30px;
 	}
 	.verde .centrado{
 		float: none;
