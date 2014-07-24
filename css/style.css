@@ -1234,6 +1234,10 @@ a{
 	.menu{
 		display: block;
 	}
+	.artico7 h2 {
+		font-size: 40px;
+    	line-height: 50px;
+	}
 }
 
 @media (max-width: 640px) {
@@ -1374,6 +1378,13 @@ a{
 		font-size: 26px;
 		line-height: 30px;
 	}
+	.artico5 .petroleo {
+    	padding-top: 18%;
+	}
+	.artico7 h2 {
+		font-size: 34px;
+    	line-height: 42px;
+	}
 }
 
 @media (max-width: 540px) {
@@ -1407,16 +1418,24 @@ a{
 		font-size: 24px;
     	line-height: 30px;
 	}
-	.artico5 h2,
-	.artico6 h2{
+	.artico5 h2{
     	font-size: 42px;
     	line-height: 46px;
 	}
-	.petroleo {
+	.artico6 h2 {
+    	font-size: 37px;
+    	line-height: 41px;
+	}
+	.artico5 .petroleo {
     	padding-top: 14%;
 	}
-	.artico5 .txt_mob{
+	.artico5 .txt_mob,
+	.artico6 .txt_mob{
 		padding-top: 10px;
+	}
+	.artico7 h2 {
+		font-size: 30px;
+    	line-height: 38px;
 	}
 }
 
@@ -1461,6 +1480,10 @@ a{
 	.artico3 .txt_mob{
 		padding: 10px 0;
 	}
+	.artico6 h2 {
+    	font-size: 29px;
+    	line-height: 33px;
+	}
 }
 
 @media (max-width: 370px) {
@@ -1482,6 +1505,14 @@ a{
 	.artico3 h2{
 		font-size: 22px;
 		line-height: 26px;
+	}
+	.artico7 h2 {
+    	font-size: 22px;
+    	line-height: 28px;
+	}
+	.artico7 .psub{
+		font-size: 14px;
+		line-height: 18px;
 	}
 }
 
