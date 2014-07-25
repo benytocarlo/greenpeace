@@ -783,7 +783,8 @@ a{
 
 .cont_info_bosque h1,
 .cont_info_artico h1,
-.cont_info_oceanos h1{
+.cont_info_oceanos h1,
+.cont_info_glaciares h1{
 	font-size: 136px;
 	font-style: italic;
   	font-weight: 700;
@@ -803,7 +804,8 @@ a{
 
 .cont_info_bosque h2,
 .cont_info_artico h2,
-.cont_info_oceanos h2{		
+.cont_info_oceanos h2,
+.cont_info_glaciares h2{		
 	font-style: italic;
   	font-weight: 700;	
 	overflow: hidden;
@@ -1076,7 +1078,10 @@ a{
 }
 
 .oceano2,
-.oceano3{
+.oceano3,
+.glacial1,
+.glacial2,
+.glacial3{
 	padding: 20px 0;
 }
 
@@ -1123,6 +1128,64 @@ a{
 .oceano5 h2{
 	font-size: 45px;
 	line-height: 49px;
+}
+
+.glacial_oscuro{
+	background: #3775A0;
+}
+
+.glacial_claro{
+	background: #59AAD8;
+}
+
+.cont_info_glaciares h1{
+	color: #90CCF0;
+}
+
+.glacial1 h1{
+	font-size: 50px;
+	line-height: 60px;
+}
+
+.glacial2 .cont_sol{
+	text-align: center;
+}
+
+.glacial2 .cont_sol .des_txt1,
+.glacial2 .cont_sol h2{
+	text-align: left;
+}
+
+.glacial2 .cont_sol h2{
+	line-height: 35px;
+	margin: 10px 0 5px 0;
+}
+
+.glacial2 .cont_sol .sol1{
+	padding-right: 5%;
+}
+
+.glacial2 .cont_sol .sol2{
+	padding-left: 5%;
+}
+
+.glacial3 h2{
+	font-size: 35px;
+	line-height: 45px;
+}
+
+.glacial3 .h1dest{
+	color: #B5DFF8;
+	font-size: 48px;
+	line-height: 52px;
+}
+
+.cont_ley{
+	padding-right: 5%;
+}
+
+.pez_img img{
+	margin-bottom: 10px;
 }
 
 /*Queries*/
@@ -1353,6 +1416,10 @@ a{
 		font-size: 40px;
     	line-height: 50px;
 	}
+	.glacial1 h1{
+		font-size: 40px;
+		line-height: 50px;
+	}
 }
 
 @media (max-width: 640px) {
@@ -1558,11 +1625,27 @@ a{
 		padding-right: 5%;
 		width: 45%;
 	}
-
-	.pez_img .des_txt1{
+	.oceano3 .pez_img .des_txt1{
 		clear: none;
 		overflow: hidden;
 		padding-top: 10%;
+	}
+	.oceano3 .padler{
+		padding: 0;
+	}
+	.glacial1 .img_mobile{
+		margin: 0 auto;
+		width: 50%;
+	}
+	.glacial2 .cont_sol h2 {
+    	padding-top: 6%;
+	}
+	.glacial2 .pez_img img{
+		height: auto;
+		width: 101px;
+	}
+	.glacial2 .cont_sol .sol2 {
+    	padding-left: 0;
 	}
 }
 
