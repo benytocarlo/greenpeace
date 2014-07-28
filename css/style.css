@@ -1001,7 +1001,8 @@ a{
 .artico4,
 .artico5,
 .artico6,
-.artico7{
+.artico7,
+.glacial4{
 	padding: 20px 0;
 }
 
@@ -1169,12 +1170,13 @@ a{
 	padding-left: 5%;
 }
 
-.glacial3 h2{
+.glacial3 h2,
+.glacial4 h2{
 	font-size: 35px;
 	line-height: 45px;
 }
 
-.glacial3 .h1dest{
+.glacial3 h1{
 	color: #B5DFF8;
 	font-size: 48px;
 	line-height: 52px;
@@ -1186,6 +1188,10 @@ a{
 
 .pez_img img{
 	margin-bottom: 10px;
+}
+
+.txt_small{
+	display: none;
 }
 
 /*Queries*/
@@ -1647,6 +1653,21 @@ a{
 	.glacial2 .cont_sol .sol2 {
     	padding-left: 0;
 	}
+	.glacial3 h2{
+		font-size: 20px;
+		line-height: 25px;
+	}
+	.glacial3 h1 {
+    	font-size: 40px;
+    	line-height: 44px;
+	}
+	.glacial3 .txt_mob{
+		clear: both;
+	}
+	.glacial4 h2{
+		font-size: 30px;
+		line-height: 34px;
+	}
 }
 
 @media (max-width: 540px) {
@@ -1708,6 +1729,21 @@ a{
 	}
 	.pez_img .des_txt1{
 		padding-top: 0;
+	}
+}
+
+@media (max-width: 490px) {
+	.txt_big{
+		display: none;
+	}
+	.txt_small{
+		display: block;
+	}
+	.glacial4 h2 {
+    	padding-top: 40%;
+	}
+	.glacial4 .des_txt1{
+		padding-top: 5%;
 	}
 }
 
