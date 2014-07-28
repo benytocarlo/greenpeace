@@ -1569,6 +1569,9 @@ a{
 	.artico5 .petroleo {
     	padding-top: 18%;
 	}
+	.artico5 .des_txt1.txt_mob {
+    	padding-top: 2%;
+	}
 	.oceano4 .petroleo {
     	padding-top: 12%;
 	}
@@ -1655,7 +1658,7 @@ a{
 	}
 	.glacial3 h2{
 		font-size: 20px;
-		line-height: 25px;
+		line-height: 26px;
 	}
 	.glacial3 h1 {
     	font-size: 40px;
