@@ -99,6 +99,7 @@ a{
 	color: #A9DB89;
 	font-size: 18px;
 	line-height: 22px;
+	padding: 0 1%;
 }
 
 .img100{
@@ -334,6 +335,7 @@ a{
 	color: #fff;
 	display: inline-block;
 	font-size: 18px;
+	height: 50px;
 	line-height: 22px;
 	padding: 15px 0;
 	text-align: center;
@@ -1426,14 +1428,14 @@ a{
 		font-size: 40px;
 		line-height: 50px;
 	}
+	.anios{
+		width: 17.5%;
+	}
 }
 
 @media (max-width: 640px) {
-	.anios{
-		width: 20%;
-	}
 	.header_tablet .anios{
-		width: 15%;
+		width: 13%;
 	}
 	.subtitle {
     	font-size: 12px;
