@@ -423,9 +423,9 @@ a{
 }
 
 .header_login2:hover{
-	background: url('../images/mas_mini_verde.png') no-repeat 225px center #fff;
-	border: 1px solid #314545;
-	color: #314545;
+	background: url('../images/unete_hover.png') no-repeat 170px center #fff;
+	border-top: 4px solid #8C2C19;
+	color: #B2371F;
 }
 
 .header_login{
