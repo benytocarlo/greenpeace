@@ -1048,15 +1048,16 @@ a{
 }
 
 .footer2 .sumate{
-	background: #314545;
+	background: url("../images/unete.png") no-repeat scroll 190px center #b2371f;
+	border-top: 4px solid #8c2c19;
 	color: #fff;
 	display: block;
 	font-size: 20px;
+	font-weight: bold;
 	line-height: 24px;
-	margin: -33px auto 0;
-	padding: 5px 0;
-	text-align: center;
-	width: 216px;
+	margin: -38px auto 0;
+	padding: 5px 0 5px 25px;
+	width: 220px;
 }
 
 .footer2 .sumate img{
