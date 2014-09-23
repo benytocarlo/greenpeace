@@ -51,7 +51,7 @@
           <form id="formulario" name="formulario" action="https://unete.greenpeace.cl/ForMa/procesar_cupon.php" method="POST" autocorrect="off" autocapitalize="off" autocomplete="off">
             <div class="row">
               <div class="small-12 medium-10 large-8 columns">
-                <h2>Autorizo el débito automático mensual de:</h2>
+                <h2>Medio de pago:</h2>
                 <!--p class="fs14"><img src="images/lock.png" alt="" />Deja tus datos con confianza. Este sitio es 100% seguro. Tus datos viajarán encriptados y solo nosotros podremos acceder a ellos</p-->
               </div>
               <div class="small-12 medium-2 large-4 columns end"></div>
@@ -64,14 +64,8 @@
                   <a href="" class="cerrar">X</a>
                 </div>
                 <ul class="left">
-                  <li><input name="importe" type="radio" value="6000"><label for="">$ 6.000 ($200 diarios)</label></li>
-                  <li><input name="importe" type="radio" value="7500" checked><label for="">$ 7.500 ($250 diarios)</label></li>
-                  <li><input name="importe" type="radio" value="10000"><label for="">$ 10.000 ($333 diarios)</label></li>
-                </ul>
-                <ul class="right">                  
-                  <li><input name="importe" type="radio" value="12500"><label for="">$ 12.500 ($417 diarios)</label></li>
-                  <li><input name="importe" type="radio" value="15000"><label for="">$ 15.000 ($500 diarios)</label></li>
-                  <li><input name="importe" type="radio" value="0"><label for="">Otras donaciones</label></li>
+                  <li><input name="" type="radio" value=""><label for="">Tarjeta de Crédito</label></li>
+                  <li><input name="" type="radio" value=""><label for="">Cuenta Corriente</label></li>
                 </ul>
                 <input type="text" id="monto" name="Monto" placeholder="Monto" class="input_big input_text" style="display:none;" maxlength="10" />
               </div>
@@ -85,12 +79,24 @@
             <div class="row">
               <div class="large-4 medium-4 small-12 columns label_left">
                 <div class="fila">
+                  <label for="" class="right">Banco</label>
+                </div>
+                <div class="fila">
+                  <label for="" class="right">Rut</label>
+                </div>
+                <div class="fila">
                   <label for="" class="right">Nombre</label>
                 </div>
                 <div class="fila">
                   <label for="" class="right">Apellido</label>
                 </div>
                 <div class="fila">
+                  <label for="" class="right">Email</label>
+                </div>
+                <div class="fila">
+                  <label for="" class="right">Teléfono móvil: 9</label>
+                </div>
+                <!--div class="fila">
                   <label for="" class="right">Sexo</label>
                 </div>
                 <div class="fila">
@@ -107,15 +113,19 @@
                 </div>
                 <div class="fila">
                   <label for="" class="right">Dirección</label>
-                </div>
-                <div class="fila">
-                  <label for="" class="right">Email</label>
-                </div>
-                <div class="fila">
-                  <label for="" class="right">Teléfono móvil: 9</label>
-                </div>
+                </div-->               
               </div>
               <div class="large-4 medium-6 small-12 columns">
+                <div class="fila">
+                  <label for="" class="label_mobile">Banco</label>
+                  <input type="text" name="" placeholder="Banco" class="input_text input_big" maxlength="100" onkeypress="return validatxt(event)" />
+                  <p id ="error_nombre_mob" class="error_mob">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <label for="" class="label_mobile">Rut</label>
+                  <input type="text" name="" placeholder="Nombre" class="input_text input_big" maxlength="100" onkeypress="return validatxt(event)" />
+                  <p id ="error_nombre_mob" class="error_mob">Este campo es obligatorio.</p>
+                </div>
                 <div class="fila">
                   <label for="" class="label_mobile">Nombre</label>
                   <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" maxlength="100" onkeypress="return validatxt(event)" />
@@ -127,6 +137,16 @@
                   <p id ="error_apellido_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Email</label>
+                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" maxlength="30" />
+                  <p id ="error_email_mob" class="error_mob">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <label for="" class="label_mobile">Teléfono móvil: 9</label>
+                  <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" maxlength="8" onkeypress="return validanum(event)" />
+                  <p id ="error_celular_mob" class="error_mob">Este id=campo es obligatorio.</p>
+                </div>
+                <!--div class="fila">
                   <label for="" class="label_mobile">Sexo</label>
                   <select name="sexo" id="" class="select">
                     <option value="" selected="">-</option>
@@ -611,19 +631,9 @@
                   <p id ="error_direccion_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
-                  <label for="" class="label_mobile">Email</label>
-                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" maxlength="30" />
-                  <p id ="error_email_mob" class="error_mob">Este campo es obligatorio.</p>
-                </div>
-                <div class="fila">
-                  <label for="" class="label_mobile">Teléfono móvil: 9</label>
-                  <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" maxlength="8" onkeypress="return validanum(event)" />
-                  <p id ="error_celular_mob" class="error_mob">Este id=campo es obligatorio.</p>
-                </div>
-                <div class="fila">
                   <input type="checkbox" id="checkbox_input" name="__ya_colabore" value="" class="left" />
                   <label for="" class="label_check">Ya he colaborado económicamente en alguna oportunidad con Greenpeace.</label>
-                </div>
+                </div-->
               </div>
               <div class="large-4 medium-2 small-12 columns cont_error_desk">
                 <div class="fila">
@@ -644,7 +654,7 @@
                 <div class="fila">
                   <p id="error_region_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
-                <div class="fila">
+                <!--div class="fila">
                   <p id="error_comuna_desk" class="error_desk">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
@@ -655,7 +665,7 @@
                 </div>
                 <div class="fila">
                   <p id="error_celular_desk" class="error_desk">Este campo es obligatorio.</p>
-                </div>
+                </div-->
               </div>
             </div>
             <div class="row">
@@ -679,7 +689,16 @@
                   <label for="" class="right">Rut</label>
                 </div>
                 <div class="fila">
-                  <label for="" class="right">Nombre y Apellido</label>
+                  <label for="" class="right">Nombre</label>
+                </div>
+                <div class="fila">
+                  <label for="" class="right">Apellido</label>
+                </div>
+                <div class="fila">
+                  <label for="" class="right">Email</label>
+                </div>
+                <div class="fila">
+                  <label for="" class="right">Teléfono móvil: 9</label>
                 </div>
               </div>
               <div class="small-12 medium-6 large-4 columns">
@@ -751,13 +770,30 @@
                   <p id="error_tarjeta_run_mob" class="error_mob">Este campo es obligatorio.</p>
                 </div>
                 <div class="fila">
+                  <label for="" class="label_mobile">Nombre</label>
+                  <input type="text" name="nombre" placeholder="Nombre" class="input_text input_big" maxlength="100" onkeypress="return validatxt(event)" />
+                  <p id ="error_nombre_mob" class="error_mob">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <label for="" class="label_mobile">Apellido</label>
+                  <input type="text" name="apellido" placeholder="Apellido" class="input_big input_text" maxlength="100" onkeypress="return validatxt(event)" />
+                  <p id ="error_apellido_mob" class="error_mob">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <label for="" class="label_mobile">Email</label>
+                  <input type="text" name="email" placeholder="Nombre@dominio.com" class="input_big input_text" maxlength="30" />
+                  <p id ="error_email_mob" class="error_mob">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <label for="" class="label_mobile">Teléfono móvil: 9</label>
+                  <input type="text" name="celular" placeholder="Escribe sólo números" class="input_big input_text" maxlength="8" onkeypress="return validanum(event)" />
+                  <p id ="error_celular_mob" class="error_mob">Este id=campo es obligatorio.</p>
+                </div>
+                <!--div class="fila">
                   <label for="" class="label_mobile">Nombre y Apellido</label>
                   <input type="text" name="nom_ape_tarjeta" placeholder="Como aparece en la tarjeta" class="input_text input_big" maxlength="150"  onkeypress="return validatxt(event)" />
                   <p id="error_nom_ape_tarjeta_mob" class="error_mob">Este campo es obligatorio.</p>
-                </div>
-                <div class="fila cont_btnu">
-                  <a class="btn_unete" href="#">Enviar</a>
-                </div>
+                </div-->
                 <input name="form_id" value="70" type="hidden" /> 
                 <input name="referrer" value="FR_havas" type="hidden" />
                 <input type="hidden" id="url_return" name="url_return" value="http://greenpeace.cl/test/dev-havas/gracias.html">
@@ -777,6 +813,46 @@
                 </div>
                 <div class="fila">
                   <p id="error_nom_ape_tarjeta_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id="error_nom_ape_tarjeta_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id="error_nom_ape_tarjeta_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+                <div class="fila">
+                  <p id="error_nom_ape_tarjeta_desk" class="error_desk">Este campo es obligatorio.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-10 large-8 columns">
+                <h2>Monto mensual:</h2>
+              </div>
+              <div class="small-12 medium-2 large-4 columns end"></div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 large-4 large-centered columns fila monto">
+                <div class="error error_envio">
+                  <p>Oh! Ha courrido un error!</p>
+                  <p>El envío de la solicitud no pudo procesarse correctamente</p>
+                  <a href="" class="cerrar">X</a>
+                </div>
+                <div class="cont_montos">
+                  <ul class="left">
+                    <li><input name="importe" type="radio" value="6000"><label for="">$ 6.000 ($200 diarios)</label></li>
+                    <li><input name="importe" type="radio" value="7500" checked><label for="">$ 7.500 ($250 diarios)</label></li>
+                    <li><input name="importe" type="radio" value="10000"><label for="">$ 10.000 ($333 diarios)</label></li>
+                  </ul>
+                  <ul class="right">                  
+                    <li><input name="importe" type="radio" value="12500"><label for="">$ 12.500 ($417 diarios)</label></li>
+                    <li><input name="importe" type="radio" value="15000"><label for="">$ 15.000 ($500 diarios)</label></li>
+                    <li><input name="importe" type="radio" value="0"><label for="">Otras donaciones</label></li>
+                  </ul>
+                </div>
+                <input type="text" id="monto" name="Monto" placeholder="Monto" class="input_big input_text" style="display:none;" maxlength="10" />
+                <div class="fila cont_btnu">
+                  <a class="btn_unete" href="#">Enviar</a>
                 </div>
               </div>
             </div>

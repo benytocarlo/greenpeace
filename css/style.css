@@ -1209,6 +1209,10 @@ a{
 	display: none;
 }
 
+.cont_montos{
+	overflow: hidden;
+}
+
 /*Queries*/
 
 @media (max-width: 1500px) {
