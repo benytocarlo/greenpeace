@@ -337,7 +337,7 @@
                     <li><input name="importe" type="radio" value="15000"><label for="">$ 15.000 ($500 diarios)</label></li>
                     <li><input name="importe" type="radio" value="0"><label for="">Otras donaciones</label></li>
                   </ul>
-                  <input type="text" id="monto" name="Monto" placeholder="Monto" class="input_big input_text" style="display:none;" maxlength="10" />
+                  <input type="text" id="monto" name="Monto" placeholder="Monto" class="input_big input_text" style="display:none;" maxlength="10" onkeypress="return validanum(event)"/>
                 </div>
                 <div class="fila cont_btnu">
                   <a class="btn_unete" href="#">Enviar</a>
