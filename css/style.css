@@ -693,12 +693,12 @@ a{
 	margin-bottom: 5px;
 }
 
-#formulario strong{
+.formulario strong{
 	display: none !important;
 }
 
-#formulario .error_mob,
-#formulario .error_desk{
+.formulario .error_mob,
+.formulario .error_desk{
 	clear: both;
 	display: none;
     font-size: 12px;
@@ -706,12 +706,12 @@ a{
     margin: 5px 0;
 }
 
-#formulario .error_desk{
+.formulario .error_desk{
 	line-height: 30px;
 	padding-left: 5px;
 }
 
-#formulario .error{
+.formulario .error{
 	background: #E5B3C7;
 	border: 1px solid #C1272D;
 }
@@ -1295,7 +1295,7 @@ a{
 }
 
 @media (max-width: 1024px) {
-	#formulario .error_desk{
+	.formulario .error_desk{
 		line-height: 16px;
 	}
 	.tronco{
